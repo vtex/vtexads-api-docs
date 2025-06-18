@@ -159,7 +159,7 @@ Atualiza preço e disponibilidade dos produtos.
 
 ## Consulta de Anúncios
 
-A API de consulta de anúncios retorna formatos de Produtos e Banners. A requisição é um `POST` para `https://VTEX Ads-media.newtail.com.br/v1/rma/:publisher_id`.
+A API de consulta de anúncios retorna formatos de Produtos e Banners. A requisição é um `POST` para `https://events.newtail-media.newtail.com.br/v1/rma/:publisher_id`.
 
 ### Parâmetros da Requisição
 
@@ -222,7 +222,7 @@ O envio é feito através de uma requisição `POST` para a respectiva URL de ev
 **Exemplo de Requisição de Impressão:**
 
 ```http
-POST [https://VTEX Ads-media.newtail.com.br/v1/beacon/impression/4a94bc6e-7db1-425f-8430-cb4d17488b3b?pos=1](https://VTEX Ads-media.newtail.com.br/v1/beacon/impression/4a94bc6e-7db1-425f-8430-cb4d17488b3b?pos=1) HTTP/1.1
+POST [https://events.newtail-media.newtail.com.br/v1/beacon/impression/4a94bc6e-7db1-425f-8430-cb4d17488b3b?pos=1](https://events.newtail-media.newtail.com.br/v1/beacon/impression/4a94bc6e-7db1-425f-8430-cb4d17488b3b?pos=1) HTTP/1.1
 Content-Type: application/json
 
 {
@@ -235,7 +235,7 @@ A resposta de sucesso é um `HTTP 202`.
 
 ### Evento de Conversão
 
-A notificação de conversão é feita para o endpoint `POST https://VTEX Ads-media.newtail.com.br/v1/beacon/conversion`.
+A notificação de conversão é feita para o endpoint `POST https://events.newtail-media.newtail.com.br/v1/beacon/conversion`.
 
 **Campos Principais do Pedido (`Order`):**
 
