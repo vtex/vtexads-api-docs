@@ -84,6 +84,124 @@ Sends product registration information. Requires authentication.
 | `sellers` | List of sellers who sell the product (in a marketplace). | Array[String] | No |
 | `metadata` | Object for additional information (key-value). | Object | No |
 
+**Request Example:**
+
+```bash
+curl --location 'https://api-retail-media.newtail.com.br/product/bulk/products' \
+--header 'x-app-id: XXXX' \
+--header 'x-api-key: YYYY' \
+--header 'Content-Type: application/json' \
+--data '[
+    {
+        "product_sku": "allan",
+        "name": "allan",
+        "url": "https://www.panvel.com/panvel/eau-de-dali-salvador-dali-eau-de-toilette-perfume-feminino-30ml/p-10007616",
+        "image_url": "https://panvelprd.vteximg.com.br/arquivos/ids/177629",
+        "categories": [
+            "Beauty",
+            "Beauty > Fragrances",
+            "Beauty > Fragrances > Perfume",
+            "Beauty > Fragrances > Perfume > For Women"
+        ],
+        "brand": "SALVADOR DALÍ",
+        "profit_margin": null,
+        "gtins": [
+            "3331438450103"
+        ],
+        "sellers": [],
+        "skus": []
+    },
+    {
+        "product_sku": "allan2",
+        "name": "allan2",
+        "url": "https://www.panvel.com/panvel/eau-de-dali-salvador-dali-eau-de-toilette-perfume-feminino-30ml/p-10007616",
+        "image_url": "https://panvelprd.vteximg.com.br/arquivos/ids/177629",
+        "categories": [
+            "Beauty",
+            "Beauty > Fragrances",
+            "Beauty > Fragrances > Perfume",
+            "Beauty > Fragrances > Perfume > For Women"
+        ],
+        "brand": "SALVADOR DALÍ",
+        "profit_margin": null,
+        "gtins": [
+            "3331438450103"
+        ],
+        "sellers": [],
+        "skus": [],
+        "tags": ["Abart", "Mega Maio"]
+    }
+]'
+```
+
+**Success Response Example:**
+
+```
+Status: 202 Accepted
+Content-Type: application/json
+
+{
+    "messages": [
+        "products will be processed soon"
+    ]
+}
+```
+
+**Error Response Example:**
+
+For validations, we use the format of [RFC 8927](https://datatracker.ietf.org/doc/rfc8927/).
+The request response will have HTTP code 422.
+
+```
+Status: 422 Unprocessable Entity
+Content-Type: application/json
+
+[
+  {
+    instancePath: '/0',
+    schemaPath: '#/items/required',
+    keyword: 'required',
+    params: { missingProperty: 'product_sku' },
+    message: "must have required property 'product_sku'",
+  },
+  {
+    instancePath: '/0',
+    schemaPath: '#/items/required',
+    keyword: 'required',
+    params: { missingProperty: 'url' },
+    message: "must have required property 'url'",
+  },
+  {
+    instancePath: '/0',
+    schemaPath: '#/items/required',
+    keyword: 'required',
+    params: { missingProperty: 'image_url' },
+    message: "must have required property 'image_url'",
+  },
+  {
+    instancePath: '/1',
+    schemaPath: '#/items/required',
+    keyword: 'required',
+    params: { missingProperty: 'name' },
+    message: "must have required property 'name'",
+  },
+  {
+    instancePath: '/1',
+    schemaPath: '#/items/required',
+    keyword: 'required',
+    params: { missingProperty: 'url' },
+    message: "must have required property 'url'",
+  },
+  {
+    instancePath: '/1',
+    schemaPath: '#/items/required',
+    keyword: 'required',
+    params: { missingProperty: 'image_url' },
+    message: "must have required property 'image_url'",
+  },
+]
+```
+
 #### **Inventory Synchronization**
 Updates price, promotional price, and availability. Requires authentication.
 
@@ -99,6 +217,30 @@ Updates price, promotional price, and availability. Requires authentication.
 | `price` | Product's "list" price. | Number | Yes |
 | `promotional_price`| "Sale" price. Send 0 to remove. | Number | Yes |
 | `is_available` | Indicates if the product is available (`true`/`false`). | Boolean | Yes |
+
+**Request Example:**
+
+```bash
+curl --location 'https://api-retail-media.newtail.com.br/product/bulk/inventories' \
+--header 'x-app-id: XXXX' \
+--header 'x-api-key: YYYY' \
+--header 'Content-Type: application/json' \
+--data '[
+    {
+        "product_sku": "allan",
+        "price": 129.90,
+        "promotional_price": 99.90,
+        "is_available": true
+    },
+    {
+        "product_sku": "allan2",
+        "store_id": "store-downtown",
+        "price": 149.90,
+        "promotional_price": 119.90,
+        "is_available": true
+    }
+]'
+```
 
 #### **Alternative Catalog Integration Methods**
 
