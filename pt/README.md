@@ -349,6 +349,49 @@ Direcione anúncios para públicos específicos para aumentar a relevância.
 #### **Segmentação em Tempo Real**
 Envie dados demográficos ou de audiência diretamente no corpo da **consulta de anúncios**, no campo `segmentation`.
 
+O campo `segmentation` é um array de objetos, onde cada objeto contém:
+- `key`: O tipo de segmentação (ex: "STATE", "CITY", "GENDER")
+- `values`: Array de valores para a segmentação
+
+**Exemplo de Segmentação:**
+
+```json
+"segmentation": [
+    {
+        "key": "STATE",
+        "values": [
+            "RJ"
+        ]
+    },
+    {
+        "key": "CITY",
+        "values": [
+            "Rio de Janeiro"
+        ]
+    },
+    {
+        "key": "NEIGHBOURHOOD",
+        "values": [
+            "Cascadura",
+            "Madureira"
+        ]
+    }
+]
+```
+
+**Tipos de Segmentação Disponíveis:**
+
+| Chave (key) | Descrição | Exemplo de Valores |
+| :--- | :--- | :--- |
+| `STATE` | Estado do usuário | "SP", "RJ", "MG" |
+| `CITY` | Cidade do usuário | "São Paulo", "Rio de Janeiro" |
+| `NEIGHBOURHOOD` | Bairro do usuário | "Vila Mariana", "Copacabana" |
+| `GENDER` | Gênero do usuário | "M", "F" |
+| `AGE_RANGE` | Faixa etária do usuário | "18-24", "25-34", "35-44" |
+| `INCOME_RANGE` | Faixa de renda | "A", "B1", "B2", "C1", "C2", "DE" |
+| `INTEREST` | Interesses do usuário | "Esportes", "Tecnologia", "Moda" |
+| `CUSTOM_AUDIENCE` | Audiência personalizada | "high_value_customers", "cart_abandoners" |
+
 #### **Envio de Dados de Audiência (Batch)**
 Para criar audiências persistentes associadas a um `user_id`, envie arquivos de dados para um bucket S3.
 

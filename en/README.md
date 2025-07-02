@@ -349,6 +349,49 @@ Target ads to specific audiences to increase relevance.
 #### **Real-Time Targeting**
 Send demographic or audience data directly in the body of the **ad query**, in the `segmentation` field.
 
+The `segmentation` field is an array of objects, where each object contains:
+- `key`: The type of segmentation (e.g., "STATE", "CITY", "GENDER")
+- `values`: Array of values for the segmentation
+
+**Segmentation Example:**
+
+```json
+"segmentation": [
+    {
+        "key": "STATE",
+        "values": [
+            "CA"
+        ]
+    },
+    {
+        "key": "CITY",
+        "values": [
+            "San Francisco"
+        ]
+    },
+    {
+        "key": "NEIGHBOURHOOD",
+        "values": [
+            "Mission District",
+            "SoMa"
+        ]
+    }
+]
+```
+
+**Available Segmentation Types:**
+
+| Key | Description | Example Values |
+| :--- | :--- | :--- |
+| `STATE` | User's state | "CA", "NY", "TX" |
+| `CITY` | User's city | "San Francisco", "New York" |
+| `NEIGHBOURHOOD` | User's neighborhood | "Mission District", "Manhattan" |
+| `GENDER` | User's gender | "M", "F" |
+| `AGE_RANGE` | User's age range | "18-24", "25-34", "35-44" |
+| `INCOME_RANGE` | Income bracket | "A", "B1", "B2", "C1", "C2", "DE" |
+| `INTEREST` | User's interests | "Sports", "Technology", "Fashion" |
+| `CUSTOM_AUDIENCE` | Custom audience | "high_value_customers", "cart_abandoners" |
+
 #### **Audience Data Submission (Batch)**
 To create persistent audiences associated with a `user_id`, send data files to an S3 bucket.
 
