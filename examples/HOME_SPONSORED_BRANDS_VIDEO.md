@@ -18,7 +18,7 @@ curl --location 'https://newtail-media.newtail.com.br/v1/rma/{PUBLISHER_ID}' \
             "types": [
                 "sponsored_brand"
             ],
-            "size": "1920x1080"
+            "size": "{ASSET_SIZE}"
         }
     },
     "session_id": "{SESSION_ID}"
