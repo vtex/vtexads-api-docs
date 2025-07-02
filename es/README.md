@@ -275,6 +275,7 @@ Con el catálogo sincronizado, su plataforma solicita anuncios para completar lo
 | `product_sku` | SKU del producto que se está visualizando. | String | Solo `context: 'product_page'` |
 | `brand_name` | Nombre de la marca que se está visualizando. | String | Solo `context: 'brand_page'` |
 | `device_id` | ID único del dispositivo (pantalla, tótem). | String | Solo `context: 'digital_signage'` |
+| `store_name` | Nombre de la tienda donde está ubicado el dispositivo. | String | Solo `context: 'digital_signage'` |
 | `placements` | Objeto que define los espacios (`placements`) de anuncio. | Object | Sí |
 | `placements.{name}.quantity` | Cantidad de anuncios deseada. | Integer | Sí |
 | `placements.{name}.size` | Tamaño esperado (ej: `desktop`). | String | Solo `types: ['banner', 'sponsored_brand']` |

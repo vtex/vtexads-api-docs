@@ -273,6 +273,7 @@ With the catalog synchronized, your platform requests ads to fill the ad spaces 
 | `product_sku` | SKU of the product being viewed. | String | Only `context: 'product_page'` |
 | `brand_name` | Name of the brand being viewed. | String | Only `context: 'brand_page'` |
 | `device_id` | Unique device ID (screen, totem). | String | Only `context: 'digital_signage'` |
+| `store_name` | Name of the store where the device is located. | String | Only `context: 'digital_signage'` |
 | `placements` | Object defining the ad `placements`. | Object | Yes |
 | `placements.{name}.quantity` | Desired number of ads. | Integer | Yes |
 | `placements.{name}.size` | Expected size (e.g., `desktop`). | String | Only `types: ['banner', 'sponsored_brand']` |
