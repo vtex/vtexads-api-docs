@@ -1,0 +1,89 @@
+## Integração de Audiências
+
+A integração de audiências pode ser feita de duas maneiras:
+
+1.  **Segmentação em Tempo Real:** Enviando os dados de audiência diretamente na [requisição de anúncios](./4-integracao-via-api.md#segmentação-de-anúncios).
+2.  **Envio em Lote (Batch):** Enviando arquivos com os dados de audiência para um S3.
+
+### Envio em Lote (Batch)
+
+A conexão de integração ocorrerá através do envio periódico das audiências para o nosso S3. As credenciais de acesso devem ser solicitadas ao seu contato na Newtail.
+
+*   **Formato do Arquivo:** `Parquet` com compressão `Snappy`.
+*   **Padrão de Diretório:** Os arquivos devem ser escritos no seguinte padrão de diretório:
+    `PREFIXO/audiences/YYYY/mm/dd/TIMESTAMP.parquet.snappy`
+
+| Atributo  | Descrição                                                                                             | Exemplo      |
+| :-------- | :---------------------------------------------------------------------------------------------------- | :----------- |
+| `PREFIXO` | O prefixo será informado pela Newtail.                                                                | `xyz`        |
+| `YYYY`    | Ano da geração com 4 dígitos.                                                                         | `2023`       |
+| `mm`      | Mês da geração com dois dígitos (Janeiro = 01 e dezembro = 12).                                       | `09`         |
+| `dd`      | Dia da geração com dois dígitos (de 01 até 31).                                                       | `31`         |
+| `TIMESTAMP`| Timestamp é a quantidade de segundos desde 1970 (o nome do arquivo pode ser qualquer coisa, o timestamp é apenas uma sugestão que nunca irá se repetir). | `1694812122` |
+
+> **Recomendação para o envio:** Na integração inicial, é fundamental que todos os dados sejam enviados. E esses dados podem ser enviados em múltiplos arquivos (dependendo do tamanho da base, um bom número é 1 milhão de linhas por arquivo). Após a primeira integração, o ideal é que seja enviado, somente o delta das linhas que tiveram alguma modificação.
+
+### Atributos do Arquivo de Audiências
+
+A maioria dos atributos não são obrigatórios, no entanto, quanto maior for o preenchimento de todas essas informações, a relevância será melhor.
+
+> As colunas são **case sensitive**. Mantenha o nome das colunas da forma como elas estão sendo apresentadas.
+
+| Coluna              | Tipo   | Obrigatório? | Descrição                                                                                                                                                                                                                                                        |
+| :------------------ | :----- | :----------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `CUSTOMER_ID`       | String | Sim          | Identificador único do cliente.                                                                                                                                                                                                                                  |
+| `EMAIL_HASHED`      | String | Não          | PII baseado no e-mail do cliente.                                                                                                                                                                                                                                |
+| `PHONE_HASHED`      | String | Não          | PII baseado no telefone principal do cliente.                                                                                                                                                                                                                    |
+| `SOCIAL_ID_HASHED`  | String | Não          | PII baseado no CPF do cliente.                                                                                                                                                                                                                                   |
+| `FIRST_NAME_HASHED` | String | Não          | PII baseado no Primeiro Nome do cliente.                                                                                                                                                                                                                         |
+| `LAST_NAME_HASHED`  | String | Não          | PII baseado no Último nome do cliente.                                                                                                                                                                                                                           |
+| `GENDER`            | String | Não          | Indica qual o sexo do cliente (`F` para feminino, `M` para masculino, `O` para outros, `NULL` para não identificados).                                                                                                                                            |
+| `AGE`               | Int    | Não          | Indica a idade do cliente.                                                                                                                                                                                                                                       |
+| `CEP`               | String | Não          | Indica qual o CEP do endereço do cliente.                                                                                                                                                                                                                        |
+| `COUNTRY`           | String | Não          | Indica qual o país do usuário.                                                                                                                                                                                                                                   |
+| `STATE`             | String | Não          | Indica o estado onde reside o cliente.                                                                                                                                                                                                                           |
+| `CITY`              | String | Não          | Indica a cidade onde reside o cliente.                                                                                                                                                                                                                           |
+| `NEIGHBORHOOD`      | String | Não          | Indica o bairro onde reside o cliente.                                                                                                                                                                                                                           |
+| `AUDIENCES`         | String | Não          | Uma lista de audiências, separadas por ponto e vírgula (;).                                                                                                                                                                                                      |
+| `NBO_PRODUCTS`      | String | Não          | Uma lista de SKU de produtos, separadas por ponto e vírgula (;).                                                                                                                                                                                                 |
+| `NBO_CATEGORIES`    | String | Não          | Uma lista de categorias, separadas por ponto e vírgula (;). A lista pode receber uma árvore de categorias usando o " > " como separador (ex: `Tablets;Bebidas > Bebidas Não Alcoólicas;Livros > Gastronomia > Guias de Bares e Restaurantes`). |
+
+### Hash dos Campos
+
+Dados confidenciais precisam ser criptografados antes de serem enviados usando o algoritmo **SHA256**.
+
+*   `EMAIL_HASHED`
+*   `PHONE_HASHED`
+*   `SOCIAL_ID_HASHED`
+*   `FIRST_NAME_HASHED`
+*   `LAST_NAME_HASHED`
+
+> Antes de gerar o hash dos dados é necessário remover todos os **ESPAÇOS** e converter para **MINÚSCULO** os seus valores.
+> Para o atributo `PHONE_HASHED`, será necessário formatá-lo no padrão **E.164** e incluir o código de chamada do país.
+
+#### Formato E.164
+
+1.  Remova todos os caracteres não numéricos, como espaços, traços, parênteses e símbolos.
+2.  Adicione o código do país com o sinal de adição (+) no início.
+3.  Adicione o código de área (se aplicável) sem o zero inicial.
+4.  Inclua o número de telefone local sem o zero inicial (caso aplicável).
+
+**Exemplo:**
+
+*   Um número de telefone do Brasil, com código de área 11 e número local 98765-4321, seria formatado como: `+5511987654321`
+
+#### Criando um HASH em Python
+
+```python
+import re
+import hashlib
+
+hash_obj = hashlib.sha256()
+
+def create_hash(x):
+    cleaned = re.sub('\s+', '', x.lower())
+    hash_obj.update(cleaned.encode('utf-8'))
+    return hash_obj.hexdigest()
+
+create_hash(' Allan ') #=> 8c01ade3cb71d3ac7c718ed5a0c565155a4c05a216d9e59013c5d7b49e916914
+```
