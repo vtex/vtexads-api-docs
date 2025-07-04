@@ -51,8 +51,9 @@ A exportação de dados agregados envia relatórios consolidados.
 
 Além da exportação via S3, é possível extrair relatórios via API. As rotas retornam JSON por padrão, mas podem ser exportadas como arquivos XLSX ao incluir o parâmetro `download=true` na query.
 
-*   `GET /report/v2/advertisers`: Informações de anunciantes (visão do publisher).
-*   `GET /report/v2/publishers`: Informações do publisher (visão do anunciante).
-*   `GET /report/network/publishers`: Publishers da rede (para contas do tipo Rede).
-*   `GET /campaign/v2`: Relatório de campanhas.
-*   `GET /ad/results/v2`: Relatório de anúncios.
+* `GET /report/v2/advertisers`: Informações de anunciantes (visão do publisher) [[Exemplo]](../../examples/EXPORT_ADVERTISER_DATA.md)
+* `GET /report/v2/publishers`: Informações do publisher (visão do anunciante) [[Exemplo]](../../examples/EXPORT_PUBLISHER_DATA.md)
+* `GET /report/network/publishers`: Publishers da rede (para contas do tipo Rede) [[Exemplo]](../../examples/EXPORT_NETWORK_PUBLISHERS_DATA.md)
+* `GET /campaign/v2`: Relatório listagem de campanhas [[Exemplo]](../../examples/EXPORT_CAMPAIGNS_LIST_DATA.md)
+* `GET /campaign/:id`: Relatório detalhado da campanha [[Exemplo]](../../examples/EXPORT_CAMPAIGN_DATA.md)
+* `GET /ad/results/v2`: Relatório de anúncios [[Exemplo]](../../examples/EXPORT_ADS_DATA.md)
