@@ -410,11 +410,11 @@ Para criar audiências persistentes associadas a um `user_id`, envie arquivos de
 ### 5.1. Exportação via API
 Endpoints REST para extrair relatórios consolidados em JSON (ou XLSX com `download=true`).
 
-* `GET /report/v2/advertisers`: Desempenho por anunciante (visão do publisher) [EXAMPLE](../examples/EXPORT_ADVERTISER_DATA.md)
-* `GET /report/v2/publishers`: Desempenho por publisher (visão do anunciante) [EXAMPLE](../examples/EXPORT_PUBLISHER_DATA.md)
-* `GET /campaign/v2`: Relatório listagem de campanhas [EXAMPLE](../examples/EXPORT_CAMPAIGNS_LIST_DATA.md)
-* `GET /campaign/:id`: Relatório detalhado da campanha [EXAMPLE](../examples/EXPORT_CAMPAIGN_DATA.md)
-* `GET /ad/results/v2`: Relatório de performance de anúncios individuais [EXAMPLE](../examples/EXPORT_ADS_DATA.md)
+* `GET /report/v2/advertisers`: Desempenho por anunciante (visão do publisher) [[Exemplo]](../examples/EXPORT_ADVERTISER_DATA.md)
+* `GET /report/v2/publishers`: Desempenho por publisher (visão do anunciante) [[Exemplo]](../examples/EXPORT_PUBLISHER_DATA.md)
+* `GET /campaign/v2`: Relatório listagem de campanhas [[Exemplo]](../examples/EXPORT_CAMPAIGNS_LIST_DATA.md)
+* `GET /campaign/:id`: Relatório detalhado da campanha [[Exemplo]](../examples/EXPORT_CAMPAIGN_DATA.md)
+* `GET /ad/results/v2`: Relatório de performance de anúncios individuais [[Exemplo]](../examples/EXPORT_ADS_DATA.md)
 
 ### 5.2. Exportação de Dados Brutos (via Storage)
 Configuramos a exportação diária (D-1) de dados para um bucket de sua preferência (AWS S3, Google Cloud Storage, Azure Blob).
