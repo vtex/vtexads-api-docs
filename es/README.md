@@ -8,7 +8,7 @@ Bienvenido a la documentación de la API de Retail Media de VTEX Ads.
 2.  [Glosario](./docs/2-glosario.md)
 3.  [Autenticación](./docs/3-autenticacion.md)
 4.  [Integración vía API](./docs/4-integracion-via-api.md)
-5.  [Reportes y Exportación de Datos](./docs/5-reportes-y-exportacion.md)
+5.  [Exportación de Datos](./docs/5-exportacion-de-datos.md)
 6.  [Otras Integraciones](./docs/6-otras-integraciones.md)
 7.  [Integración VTEX](./docs/7-integracion-vtex.md)
 8.  [Transferencia de Créditos](./docs/8-repasse.md)
