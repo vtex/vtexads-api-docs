@@ -1,4 +1,4 @@
-## Transferencia de Créditos
+## 7. Transferencia de Créditos
 
 Flujo que permite al marketplace transferir créditos de publicidad a sus sellers. Para ello, el marketplace debe implementar dos endpoints y consumir un webhook de Newtail.
 

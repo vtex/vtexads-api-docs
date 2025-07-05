@@ -13,7 +13,7 @@ La integración se fundamenta en tres pilares que garantizan el funcionamiento d
 | Tipo de Anuncio | API Type | Descripción |
 | :--- | :--- |:------------------------------------------------|
 | **Sponsored Products** | `product` | Anuncios de productos individuales. |
-| **Display Banner** | `banner` | Anuncios visuales (imagen estática o video). |
+| **Display** | `banner` | Anuncios visuales (imagen estática o video). |
 | **Sponsored Brands** | `sponsored_brand` | Anuncios de marca con título, logo y productos. (imagen estática o video) |
 | **Digital Signage** | `digital_signage`| Contenido para pantallas y tótems físicos. |
 

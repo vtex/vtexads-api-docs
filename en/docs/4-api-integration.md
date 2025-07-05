@@ -13,7 +13,7 @@ The integration is based on three pillars that ensure the solution's functionali
 | Ad Type | API Type | Description |
 | :--- | :--- |:------------------------------------------------|
 | **Sponsored Products** | `product` | Ads for individual products. |
-| **Display Banner** | `banner` | Visual ads (static image or video). |
+| **Display** | `banner` | Visual ads (static image or video). |
 | **Sponsored Brands** | `sponsored_brand` | Brand ads with a title, logo, and products. (static image or video) |
 | **Digital Signage** | `digital_signage`| Content for physical screens and totems. |
 

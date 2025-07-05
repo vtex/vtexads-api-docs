@@ -1,4 +1,4 @@
-## Audience Integration
+## 9. Audience Integration
 
 Audience integration can be done in two ways:
 

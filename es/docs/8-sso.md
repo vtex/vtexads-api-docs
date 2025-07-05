@@ -1,4 +1,4 @@
-## SSO (Single Sign-On)
+## 8. SSO (Single Sign-On)
 
 API para el inicio de sesión unificado del seller. Al llamar a esta API, Newtail genera una URL de redireccionamiento que permite al usuario acceder a la plataforma de Newtail sin necesidad de un nuevo inicio de sesión.
 

@@ -1,4 +1,4 @@
-## Repasse de Créditos
+## 7. Repasse de Créditos
 
 Fluxo que permite ao marketplace transferir créditos de anúncio para seus sellers. Para isso, o marketplace deve implementar dois endpoints e consumir um webhook da Newtail.
 

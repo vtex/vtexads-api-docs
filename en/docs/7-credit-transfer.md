@@ -1,4 +1,4 @@
-## Credit Transfer
+## 7. Credit Transfer
 
 A flow that allows the marketplace to transfer advertising credits to its sellers. To do this, the marketplace must implement two endpoints and consume a webhook from Newtail.
 
