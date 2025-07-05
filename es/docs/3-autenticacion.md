@@ -1,6 +1,6 @@
 ## 3. Autenticación
 
-La autenticación es necesaria **solo para los endpoints de sincronización del catálogo de productos**. Las demás llamadas, como consulta de anuncios y notificación de eventos, son públicas y no requieren autenticación.
+La autenticación es necesaria para el envío de catálogos, el consumo de informes y la gestión. Las demás llamadas, como consulta de anuncios y notificación de eventos, son públicas y no requieren autenticación.
 
 Para los endpoints protegidos, las credenciales deben ser enviadas vía encabezado (header) HTTP. Solicite sus credenciales al gerente de cuenta.
 
