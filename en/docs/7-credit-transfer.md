@@ -1,11 +1,13 @@
 ## 7. Credit Transfer
 
+![Credit Transfer Flow](../../diagrams/images/credit-transfer.png)
+
 A flow that allows the marketplace to transfer advertising credits to its sellers. To do this, the marketplace must implement two endpoints and consume a webhook from Newtail.
 
   * **Endpoints to be implemented by the Marketplace (Authentication: Basic Auth):**
     1.  **Check Balance (`GET /checking_account`)**
         *   **Objective:** Check the seller's available balance.
-        *   **Query Parameters:** `seller_id`, `publisher_id`.
+        *   **Query Parameters:** `seller_id`, `publisher_id` (optional, only applies to cases where an entity manages multiple publishers).
         *   **Success Response (200 OK):**
             ```json
             { "total": "1111.00" }
@@ -22,10 +24,24 @@ A flow that allows the marketplace to transfer advertising credits to its seller
               "transfer_identity_id": "uuid"
             }
             ```
-        *   **Success Response (201 Created):**
+        *   **Response (201 Created):**
             ```json
-            { "transaction_id": "TRANSACTION_ID" }
+            {
+              "transaction_id": "TRANSACTION_ID",
+              "status": "processing"
+            }
             ```
+            With the `processing` status, the transaction is not yet complete and a webhook will be sent.
+            For synchronous transactions, the statuses can be:
+            - `success`: The transaction was completed successfully.
+            - `failure`: The transaction failed.
+              ```json
+              {
+                "transaction_id": "TRANSACTION_ID",
+                "status": "failure",
+                "message": "Reason for refusal"
+              }
+              ```
 
   * **Webhook to be consumed by the Marketplace:**
     *   **Objective:** Notify Newtail about the final status of the transfer.

@@ -1,11 +1,13 @@
 ## 7. Repasse de Créditos
 
+![Fluxo de Repasse de Créditos](../../diagrams/images/credit-transfer.png)
+
 Fluxo que permite ao marketplace transferir créditos de anúncio para seus sellers. Para isso, o marketplace deve implementar dois endpoints e consumir um webhook da Newtail.
 
   * **Endpoints a serem implementados pelo Marketplace (Autenticação: Basic Auth):**
     1.  **Consulta de Saldo (`GET /checking_account`)**
         *   **Objetivo:** Verificar o saldo disponível do seller.
-        *   **Parâmetros (Query):** `seller_id`, `publisher_id`.
+        *   **Parâmetros (Query):** `seller_id`, `publisher_id` (opcional, utilizado apenas em casos onde uma entidade gerencia múltiplos publishers).
         *   **Resposta de Sucesso (200 OK):**
             ```json
             { "total": "1111.00" }
@@ -22,10 +24,24 @@ Fluxo que permite ao marketplace transferir créditos de anúncio para seus sell
               "transfer_identity_id": "uuid"
             }
             ```
-        *   **Resposta de Sucesso (201 Created):**
+        *   **Resposta (201 Created):**
             ```json
-            { "transaction_id": "TRANSACTION_ID" }
+            {
+              "transaction_id": "TRANSACTION_ID",
+              "status": "processing"
+            }
             ```
+            Com o status `processing` a transação ainda não está completa e o webhook será enviado.
+            Para transações síncronas, os status podem ser:
+            - `success`: A transação foi concluída com sucesso.
+            - `failure`: A transação falhou.
+              ```json
+              {
+                "transaction_id": "TRANSACTION_ID",
+                "status": "failure",
+                "message": "Motivo da recusa"
+              }
+              ```
 
   * **Webhook a ser consumido pelo Marketplace:**
     *   **Objetivo:** Notificar a Newtail sobre o status final da transferência.

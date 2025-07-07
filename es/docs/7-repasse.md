@@ -1,11 +1,13 @@
 ## 7. Transferencia de Créditos
 
+![Flujo de Transferencia de Créditos](../../diagrams/images/credit-transfer.png)
+
 Flujo que permite al marketplace transferir créditos de publicidad a sus sellers. Para ello, el marketplace debe implementar dos endpoints y consumir un webhook de Newtail.
 
   * **Endpoints a ser implementados por el Marketplace (Autenticación: Basic Auth):**
     1.  **Consulta de Saldo (`GET /checking_account`)**
         *   **Objetivo:** Verificar el saldo disponible del seller.
-        *   **Parámetros (Query):** `seller_id`, `publisher_id`.
+        *   **Parámetros (Query):** `seller_id`, `publisher_id` (opcional, utilizado solo en casos donde una entidad gestiona múltiples publishers).
         *   **Respuesta Exitosa (200 OK):**
             ```json
             { "total": "1111.00" }
@@ -22,10 +24,24 @@ Flujo que permite al marketplace transferir créditos de publicidad a sus seller
               "transfer_identity_id": "uuid"
             }
             ```
-        *   **Respuesta Exitosa (201 Created):**
+        *   **Respuesta (201 Created):**
             ```json
-            { "transaction_id": "TRANSACTION_ID" }
+            {
+              "transaction_id": "TRANSACTION_ID",
+              "status": "processing"
+            }
             ```
+            Con el estado `processing`, la transacción aún no está completa y se enviará el webhook.
+            Para transacciones síncronas, los estados pueden ser:
+            - `success`: La transacción se completó con éxito.
+            - `failure`: La transacción falló.
+              ```json
+              {
+                "transaction_id": "TRANSACTION_ID",
+                "status": "failure",
+                "message": "Motivo del rechazo"
+              }
+              ```
 
   * **Webhook a ser consumido por el Marketplace:**
     *   **Objetivo:** Notificar a Newtail sobre el estado final de la transferencia.
