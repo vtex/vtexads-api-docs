@@ -2,7 +2,7 @@
 
 ![Flujo de Transferencia de Créditos](../../diagrams/images/credit-transfer.png)
 
-Flujo que permite al marketplace transferir créditos de publicidad a sus sellers. Para ello, el marketplace debe implementar dos endpoints y consumir un webhook de Newtail.
+Flujo que permite al marketplace transferir créditos de publicidad a sus sellers. Para ello, el marketplace debe implementar dos endpoints y consumir un webhook de VTEXAds.
 
   * **Endpoints a ser implementados por el Marketplace (Autenticación: Basic Auth):**
     1.  **Consulta de Saldo (`GET /checking_account`)**
@@ -24,17 +24,15 @@ Flujo que permite al marketplace transferir créditos de publicidad a sus seller
               "transfer_identity_id": "uuid"
             }
             ```
-        *   **Respuesta (201 Created):**
-            ```json
-            {
-              "transaction_id": "TRANSACTION_ID",
-              "status": "processing"
-            }
-            ```
-            Con el estado `processing`, la transacción aún no está completa y se enviará el webhook.
-            Para transacciones síncronas, los estados pueden ser:
-            - `success`: La transacción se completó con éxito.
-            - `failure`: La transacción falló.
+        *   **Respuestas:**
+            - **Síncrona (Éxito):** `201 Created`
+              ```json
+              {
+                "transaction_id": "TRANSACTION_ID",
+                "status": "success"
+              }
+              ```
+            - **Síncrona (Falla):** `400 Bad Request`
               ```json
               {
                 "transaction_id": "TRANSACTION_ID",
@@ -42,30 +40,32 @@ Flujo que permite al marketplace transferir créditos de publicidad a sus seller
                 "message": "Motivo del rechazo"
               }
               ```
+            - **Asíncrona:** `202 Accepted`
+              ```json
+              {
+                "transaction_id": "TRANSACTION_ID",
+                "status": "processing"
+              }
+              ```
 
   * **Webhook a ser consumido por el Marketplace:**
-    *   **Objetivo:** Notificar a Newtail sobre el estado final de la transferencia.
+    *   **Objetivo:** Notificar a VTEXAds sobre el estado final de la transferencia.
     *   **Endpoint:** `POST https://api-retail-media.newtail.com.br/webhook/marketplace/transfers/:publisher_id`
     *   **Autenticación:** `x-api-key` y `x-secret-key`.
-    *   **Payload de Éxito:**
+    *   **Payload:**
         ```json
         {
-          "amount": "10.00",
-          "seller_id": "SELLER_ID",
-          "publisher_id": "PUBLISHER_ID",
-          "transfer_identity_id": "uuid",
+          "transaction_id": "TRANSACTION_ID",
           "status": "success"
         }
         ```
-    *   **Payload de Falla:**
+        o
         ```json
         {
-          "amount": "10.00",
-          "seller_id": "SELLER_ID",
-          "publisher_id": "PUBLISHER_ID",
-          "transfer_identity_id": "uuid",
+          "transaction_id": "TRANSACTION_ID",
           "status": "failure",
           "message": "Descripción del problema"
         }
         ```
     *   **Lógica de Reintentos:** En caso de falla en la llamada del webhook, el marketplace debe realizar nuevos intentos.
+    *   **Respuesta Esperada:** `204 No Content`

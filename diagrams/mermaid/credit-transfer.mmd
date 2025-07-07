@@ -22,13 +22,13 @@ sequenceDiagram
 
     Seller->>VTEXAds: Request to transfer certain amount to ADs
     VTEXAds->>Marketplace: POST /checking_account/transfer
-    alt Synchronous
+    alt Synchronous Success
         Marketplace-->>VTEXAds: 201 Created { "transaction_id": "...", "status": "success" }
     else Synchronous Failure
-        Marketplace-->>VTEXAds: 201 Created { "transaction_id": "...", "status": "failure", "message": "..." }
-    else Asynchronous
-        Marketplace-->>VTEXAds: 201 Created { "transaction_id": "...", "status": "processing" }
-        Marketplace->>VTEXAds: POST /webhook/marketplace/transfers (success)
-        VTEXAds-->>Marketplace: 200 OK
+        Marketplace-->>VTEXAds: 400 Bad Request { "transaction_id": "...", "status": "failure", "message": "..." }
+    else Asynchronous Webhook
+        Marketplace-->>VTEXAds: 202 Accepted { "transaction_id": "...", "status": "processing" }
+        Marketplace->>VTEXAds: POST /webhook/marketplace/transfers <br/>{ "transaction_id": "...", "status": "success/failure", ... }
+        VTEXAds-->>Marketplace: 204 OK
     end
     VTEXAds-->>Seller: Confirm if transfer was success or fail
