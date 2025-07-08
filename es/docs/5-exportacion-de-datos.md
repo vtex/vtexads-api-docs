@@ -6,11 +6,12 @@ La exportación de datos le permite recibir información detallada sobre eventos
 
 Además de la exportación a través de S3, es posible extraer informes a través de la API. Las rutas devuelven JSON por defecto, pero se pueden exportar como archivos XLSX incluyendo el parámetro `download=true` en la consulta.
 
-*   `GET /report/v2/advertisers`: Información de anunciantes (vista del publisher).
-*   `GET /report/v2/publishers`: Información del publisher (vista del anunciante).
-*   `GET /report/network/publishers`: Publishers de la red (para cuentas de tipo Red).
-*   `GET /campaign/v2`: Informe de campañas.
-*   `GET /ad/results/v2`: Informe de anuncios.
+*  `GET /report/v2/advertisers`: Información de anunciantes (vista del publisher) [[Ejemplo]](../../examples/EXPORT_ADVERTISER_DATA.md)
+*  `GET /report/v2/publishers`: Información del publisher (vista del anunciante) [[Ejemplo]](../../examples/EXPORT_PUBLISHER_DATA.md)
+*  `GET /report/network/publishers`: Publishers de la red (para cuentas de tipo Red) [[Ejemplo]](../../examples/EXPORT_NETWORK_PUBLISHERS_DATA.md)
+*  `GET /campaign/v2`: Informe listado de campañas [[Ejemplo]](../../examples/EXPORT_NETWORK_PUBLISHERS_DATA.md)
+*  `GET /campaign/:id`: Informe detallado de la campaña [[Ejemplo]](../../examples/EXPORT_CAMPAIGN_DATA.md)
+*  `GET /ad/results/v2`: Informe de anuncios individuales [[Ejemplo]](../../examples/EXPORT_CAMPAIGN_DATA.md)
 
 ### 5.2. Exportación de Datos
 
