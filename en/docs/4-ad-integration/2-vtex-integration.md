@@ -1,4 +1,4 @@
-### 6.2. VTEX Integration (VTEX IO App)
+## 6. VTEX Integration (VTEX IO App)
 For stores on the VTEX platform, Newtail offers a storefront app (`Newtail Media APP VTEX`) that drastically simplifies implementation. The app includes visual components and all the logic for ad queries and event notifications.
 
 *   **Step 1: Catalog Synchronization**

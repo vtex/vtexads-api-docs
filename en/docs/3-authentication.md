@@ -1,6 +1,6 @@
 ## 3. Authentication
 
-Authentication is required **only for the product catalog synchronization endpoints**. Other calls, such as ad queries and event notifications, are public and do not require authentication.
+Authentication is required for catalog submission, report consumption, and management. Other calls, such as ad queries and event notifications, are public and do not require authentication.
 
 For protected endpoints, credentials must be sent via HTTP header. Request your credentials from your account manager.
 
