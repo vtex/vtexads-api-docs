@@ -16,3 +16,4 @@ Bem-vindo à documentação da API de Retail Media da VTEX Ads.
 5.  [Exportação de Dados](./docs/5-exportacao-de-dados.md)
 6.  [Repasse de Créditos](./docs/7-repasse.md)
 7.  [SSO (Single Sign-On)](./docs/8-sso.md)
+8.  [Script Agent](./docs/10-script-agent.md)
