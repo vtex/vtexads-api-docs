@@ -58,6 +58,12 @@ Examples are organized by context (where the ad appears) and ad type:
 |---------|-------------|
 | [DIGITAL_SIGNAGE](DIGITAL_SIGNAGE.md) | How to request ads for digital signage (in-store displays) |
 
+### Video
+
+| Example                             | Description |
+|-------------------------------------|-------------|
+| [Video Player Browser Examples](VIDEOS_AUTOPLAY_BROWSER_EXAMPLE.html) | Example of autoplaying a video in a browser using HTML5 |
+
 ## Key Differences Between Examples
 
 - **Context**: Different contexts require specific parameters (e.g., `product_sku` for product pages, `term` for search)

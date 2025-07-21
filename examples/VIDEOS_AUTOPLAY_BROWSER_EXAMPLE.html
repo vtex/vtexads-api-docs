@@ -26,7 +26,7 @@
 <div class="container mx-auto p-4 md:p-8">
     <header class="text-center mb-10">
         <h1 class="text-3xl md:text-4xl font-bold text-slate-900">Video Player Browser Examples</h1>
-        <p class="text-slate-600 mt-2">This examples only HTML example!</p>
+        <p class="text-slate-600 mt-2" style="color: red; margin-top: 20px; font-size: 20px; display: inline-block; border: 1px solid red; padding: 10px; border-radius: 5px; background: rgba(255, 0, 0, 0.25)">These examples simply show how to create a video player using HTML</p>
     </header>
 
     <!-- Examples Container -->
@@ -45,6 +45,24 @@
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div class="relative aspect-video bg-slate-800 rounded-lg overflow-hidden">
                             <video class="w-full h-full object-cover" src="https://cdn2.newtail.com.br/retail_media/ads-video/2025/07/18/4a3ca2dcd2c25b21e85aa65c93632ac5.mp4" autoplay muted loop playsinline></video>
+                            <div class="absolute bottom-2 right-2 flex space-x-2">
+                                <button class="play-pause-btn bg-black bg-opacity-50 text-white rounded-full w-8 h-8 flex items-center justify-center hover:bg-opacity-70">
+                                    <svg class="pause-icon w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="display:block">
+                                        <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/>
+                                    </svg>
+                                    <svg class="play-icon w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="display:none">
+                                        <path d="M8 5v14l11-7z"/>
+                                    </svg>
+                                </button>
+                                <button class="mute-unmute-btn bg-black bg-opacity-50 text-white rounded-full w-8 h-8 flex items-center justify-center hover:bg-opacity-70">
+                                    <svg class="mute-icon w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="display:block">
+                                        <path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/>
+                                    </svg>
+                                    <svg class="unmute-icon w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="display:none">
+                                        <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+                                    </svg>
+                                </button>
+                            </div>
                         </div>
                         <div class="grid grid-cols-2 gap-2">
                             <div class="border rounded-lg p-2 text-center flex flex-col justify-between">
@@ -79,6 +97,24 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div class="relative aspect-video bg-slate-800 rounded-lg overflow-hidden">
                 <video class="w-full h-full object-cover" src="https://cdn2.newtail.com.br/retail_media/ads-video/2025/07/18/4a3ca2dcd2c25b21e85aa65c93632ac5.mp4" autoplay muted loop playsinline></video>
+                <div class="absolute bottom-2 right-2 flex space-x-2">
+                    <button class="play-pause-btn bg-black bg-opacity-50 text-white rounded-full w-8 h-8 flex items-center justify-center hover:bg-opacity-70">
+                        <svg class="pause-icon w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="display:block">
+                            <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/>
+                        </svg>
+                        <svg class="play-icon w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="display:none">
+                            <path d="M8 5v14l11-7z"/>
+                        </svg>
+                    </button>
+                    <button class="mute-unmute-btn bg-black bg-opacity-50 text-white rounded-full w-8 h-8 flex items-center justify-center hover:bg-opacity-70">
+                        <svg class="mute-icon w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="display:block">
+                            <path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/>
+                        </svg>
+                        <svg class="unmute-icon w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="display:none">
+                            <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+                        </svg>
+                    </button>
+                </div>
             </div>
             <div class="grid grid-cols-2 gap-2">
                 <div class="border rounded-lg p-2 text-center">
@@ -108,6 +144,24 @@
                 <div class="bg-white p-4 rounded-lg shadow-lg">
                     <div class="relative w-full max-w-2xl mx-auto aspect-video bg-slate-800 rounded-lg overflow-hidden">
                         <video class="w-full h-full object-cover" src="https://cdn2.newtail.com.br/retail_media/ads-video/2025/07/18/4a3ca2dcd2c25b21e85aa65c93632ac5.mp4" autoplay muted loop playsinline></video>
+                        <div class="absolute bottom-2 right-2 flex space-x-2">
+                            <button class="play-pause-btn bg-black bg-opacity-50 text-white rounded-full w-8 h-8 flex items-center justify-center hover:bg-opacity-70">
+                                <svg class="pause-icon w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="display:block">
+                                    <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/>
+                                </svg>
+                                <svg class="play-icon w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="display:none">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </button>
+                            <button class="mute-unmute-btn bg-black bg-opacity-50 text-white rounded-full w-8 h-8 flex items-center justify-center hover:bg-opacity-70">
+                                <svg class="mute-icon w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="display:block">
+                                    <path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/>
+                                </svg>
+                                <svg class="unmute-icon w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="display:none">
+                                    <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+                                </svg>
+                            </button>
+                        </div>
                     </div>
                 </div>
                 <div class="relative">
@@ -129,6 +183,24 @@
             loop
             playsinline>
         </video>
+        <div class="absolute bottom-2 right-2 flex space-x-2">
+            <button class="play-pause-btn bg-black bg-opacity-50 text-white rounded-full w-8 h-8 flex items-center justify-center hover:bg-opacity-70">
+                <svg class="pause-icon w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="display:block">
+                    <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/>
+                </svg>
+                <svg class="play-icon w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="display:none">
+                    <path d="M8 5v14l11-7z"/>
+                </svg>
+            </button>
+            <button class="mute-unmute-btn bg-black bg-opacity-50 text-white rounded-full w-8 h-8 flex items-center justify-center hover:bg-opacity-70">
+                <svg class="mute-icon w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="display:block">
+                    <path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/>
+                </svg>
+                <svg class="unmute-icon w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="display:none">
+                    <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+                </svg>
+            </button>
+        </div>
     </div>
 </body>
 </html></textarea>
@@ -145,6 +217,24 @@
                     <img src="https://placehold.co/100x40/ffffff/000000?text=LOGO" alt="Brand Logo" class="h-8 mb-4">
                     <div class="relative aspect-video bg-slate-800 rounded-lg overflow-hidden mb-4">
                         <video class="w-full h-full object-cover" src="https://cdn2.newtail.com.br/retail_media/ads-video/2025/07/18/4a3ca2dcd2c25b21e85aa65c93632ac5.mp4" autoplay muted loop playsinline></video>
+                        <div class="absolute bottom-2 right-2 flex space-x-2">
+                            <button class="play-pause-btn bg-black bg-opacity-50 text-white rounded-full w-8 h-8 flex items-center justify-center hover:bg-opacity-70">
+                                <svg class="pause-icon w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="display:block">
+                                    <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/>
+                                </svg>
+                                <svg class="play-icon w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="display:none">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </button>
+                            <button class="mute-unmute-btn bg-black bg-opacity-50 text-white rounded-full w-8 h-8 flex items-center justify-center hover:bg-opacity-70">
+                                <svg class="mute-icon w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="display:block">
+                                    <path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/>
+                                </svg>
+                                <svg class="unmute-icon w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="display:none">
+                                    <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+                                </svg>
+                            </button>
+                        </div>
                     </div>
                     <div class="text-center">
                         <img src="https://placehold.co/200x200/f0f0f0/333?text=Product" alt="Product" class="w-1/2 rounded-md mx-auto mb-2">
@@ -166,6 +256,24 @@
         <img src="https://placehold.co/100x40/ffffff/000000?text=LOGO" alt="Logo" class="h-8 mb-4">
         <div class="relative aspect-video bg-slate-800 rounded-lg overflow-hidden mb-4">
             <video class="w-full h-full object-cover" src="https://cdn2.newtail.com.br/retail_media/ads-video/2025/07/18/4a3ca2dcd2c25b21e85aa65c93632ac5.mp4" autoplay muted loop playsinline></video>
+            <div class="absolute bottom-2 right-2 flex space-x-2">
+                <button class="play-pause-btn bg-black bg-opacity-50 text-white rounded-full w-8 h-8 flex items-center justify-center hover:bg-opacity-70">
+                    <svg class="pause-icon w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="display:block">
+                        <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/>
+                    </svg>
+                    <svg class="play-icon w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="display:none">
+                        <path d="M8 5v14l11-7z"/>
+                    </svg>
+                </button>
+                <button class="mute-unmute-btn bg-black bg-opacity-50 text-white rounded-full w-8 h-8 flex items-center justify-center hover:bg-opacity-70">
+                    <svg class="mute-icon w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="display:block">
+                        <path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/>
+                    </svg>
+                    <svg class="unmute-icon w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="display:none">
+                        <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+                    </svg>
+                </button>
+            </div>
         </div>
         <div class="text-center">
             <img src="https://placehold.co/200x200/f0f0f0/333?text=Product" alt="Product" class="w-1/2 rounded-md mx-auto mb-2">
@@ -207,6 +315,49 @@
                 // Deselects the text after copying
                 window.getSelection().removeAllRanges();
             }
+        });
+    });
+
+    // Video controls functionality
+    document.addEventListener('DOMContentLoaded', () => {
+        // Play/Pause buttons
+        document.querySelectorAll('.play-pause-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                const videoContainer = button.closest('div[class*="relative"]');
+                const video = videoContainer.querySelector('video');
+                const playIcon = button.querySelector('.play-icon');
+                const pauseIcon = button.querySelector('.pause-icon');
+
+                if (video.paused) {
+                    video.play();
+                    playIcon.style.display = 'none';
+                    pauseIcon.style.display = 'block';
+                } else {
+                    video.pause();
+                    playIcon.style.display = 'block';
+                    pauseIcon.style.display = 'none';
+                }
+            });
+        });
+
+        // Mute/Unmute buttons
+        document.querySelectorAll('.mute-unmute-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                const videoContainer = button.closest('div[class*="relative"]');
+                const video = videoContainer.querySelector('video');
+                const muteIcon = button.querySelector('.mute-icon');
+                const unmuteIcon = button.querySelector('.unmute-icon');
+
+                if (video.muted) {
+                    video.muted = false;
+                    muteIcon.style.display = 'none';
+                    unmuteIcon.style.display = 'block';
+                } else {
+                    video.muted = true;
+                    muteIcon.style.display = 'block';
+                    unmuteIcon.style.display = 'none';
+                }
+            });
         });
     });
 </script>
