@@ -1,3 +1,5 @@
+![VTEX Ads Logo](assets/vtex-ads-logo.png)
+
 # VTEX Ads Documentation
 
 * [Documentation in English](en/README.md)

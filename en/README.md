@@ -1,3 +1,5 @@
+![VTEX Ads Logo](../assets/vtex-ads-logo.png)
+
 # **Retail Media API Documentation**
 
 Welcome to the VTEX Ads Retail Media API documentation.

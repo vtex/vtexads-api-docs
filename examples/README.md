@@ -1,3 +1,5 @@
+![VTEX Ads Logo](../assets/vtex-ads-logo.png)
+
 # VTEX Ads API Examples
 
 This directory contains examples of how to use the VTEX Ads API for different contexts and ad types. Each example includes sample request and response payloads.

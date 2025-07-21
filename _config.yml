@@ -1,0 +1,6 @@
+theme: jekyll-theme-cayman
+title: VTEX Ads Documentation
+description: Documentation for VTEX Ads Retail Media API
+show_downloads: false
+github:
+  is_project_page: true
