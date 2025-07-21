@@ -4,5 +4,3 @@ description: Documentation for VTEX Ads Retail Media API
 show_downloads: false
 github:
   is_project_page: true
-source: ./
-destination: ./_site
