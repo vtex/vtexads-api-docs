@@ -6,11 +6,12 @@ Data export allows you to receive detailed information about events and aggregat
 
 In addition to exporting via S3, it is possible to extract reports via the API. The routes return JSON by default, but can be exported as XLSX files by including the `download=true` parameter in the query.
 
-*   `GET /report/v2/advertisers`: Advertiser information (publisher view).
-*   `GET /report/v2/publishers`: Publisher information (advertiser view).
-*   `GET /report/network/publishers`: Network publishers (for Network type accounts).
-*   `GET /campaign/v2`: Campaign report.
-*   `GET /ad/results/v2`: Ad report.
+*  `GET /report/v2/advertisers`: Advertiser information (publisher view) [[Example]](../../examples/EXPORT_ADVERTISER_DATA.md)
+*  `GET /report/v2/publishers`: Publisher information (advertiser view) [[Example]](../../examples/EXPORT_PUBLISHER_DATA.md)
+*  `GET /report/network/publishers`: Network publishers (for Network type accounts) [[Example]](../../examples/EXPORT_CAMPAIGNS_LIST_DATA.md)
+*  `GET /campaign/v2`: Campaign listing report [[Example]](../../examples/EXPORT_CAMPAIGNS_LIST_DATA.md)
+*  `GET /campaign/:id`: Detailed campaign report [[Example]](../../examples/EXPORT_CAMPAIGN_DATA.md)
+*  `GET /ad/results/v2`: Performance report for individual ads  [[Example]](../../examples/EXPORT_ADS_DATA.md)
 
 ### 5.2. Data Export
 
