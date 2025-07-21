@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Player Layout Examples</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        textarea {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.875rem;
+            line-height: 1.5;
+            background-color: #f8fafc; /* slate-50 */
+            color: #1e293b; /* slate-800 */
+            border: 1px solid #cbd5e1; /* slate-300 */
+            resize: vertical;
+        }
+    </style>
+</head>
+<body class="bg-slate-100 text-slate-800">
+
+<div class="container mx-auto p-4 md:p-8">
+    <header class="text-center mb-10">
+        <h1 class="text-3xl md:text-4xl font-bold text-slate-900">Video Player Browser Examples</h1>
+        <p class="text-slate-600 mt-2">This examples only HTML example!</p>
+    </header>
+
+    <!-- Examples Container -->
+    <div class="space-y-12">
+
+        <!-- Example 1: Sponsored Brands with Video -->
+        <div>
+            <h2 class="text-2xl font-bold mb-4 border-b pb-2">1. Sponsored Brands with Video</h2>
+            <div class="grid grid-cols-1 xl:grid-cols-2 gap-8">
+                <!-- Visual Layout -->
+                <div class="bg-white p-4 rounded-lg shadow-lg border-2 border-pink-400">
+                    <div class="flex justify-between items-center mb-4">
+                        <img src="https://placehold.co/100x40/ffffff/000000?text=LOGO" alt="Brand Logo" class="h-8">
+                        <a href="#" class="bg-pink-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-pink-600 transition-colors">See more</a>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="relative aspect-video bg-slate-800 rounded-lg overflow-hidden">
+                            <video class="w-full h-full object-cover" src="https://cdn2.newtail.com.br/retail_media/ads-video/2025/07/18/4a3ca2dcd2c25b21e85aa65c93632ac5.mp4" autoplay muted loop playsinline></video>
+                        </div>
+                        <div class="grid grid-cols-2 gap-2">
+                            <div class="border rounded-lg p-2 text-center flex flex-col justify-between">
+                                <img src="https://placehold.co/200x200/f0f0f0/333?text=Product+1" alt="Product 1" class="w-full rounded-md mx-auto">
+                                <p class="text-xs font-semibold my-2">RTX 4060 ASUS Dual 8G EVO OC</p>
+                                <button class="bg-green-500 text-white w-full py-2 rounded-lg text-sm font-bold hover:bg-green-600">Buy</button>
+                            </div>
+                            <div class="border rounded-lg p-2 text-center flex flex-col justify-between">
+                                <img src="https://placehold.co/200x200/f0f0f0/333?text=Product+2" alt="Product 2" class="w-full rounded-md mx-auto">
+                                <p class="text-xs font-semibold my-2">RTX 4060 ASUS Dual 8G EVO OC</p>
+                                <button class="bg-green-500 text-white w-full py-2 rounded-lg text-sm font-bold hover:bg-green-600">Buy</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Code with copy button -->
+                <div class="relative">
+                        <textarea id="code-1" class="w-full h-full rounded-lg p-4 pr-16" rows="15" readonly><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sponsored Brands Example</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="p-4 rounded-lg border-2 border-pink-400 bg-white m-4">
+        <div class="flex justify-between items-center mb-4">
+            <img src="https://placehold.co/100x40/ffffff/000000?text=LOGO" alt="Logo" class="h-8">
+            <a href="#" class="bg-pink-500 text-white font-bold py-2 px-4 rounded-lg">See more</a>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="relative aspect-video bg-slate-800 rounded-lg overflow-hidden">
+                <video class="w-full h-full object-cover" src="https://cdn2.newtail.com.br/retail_media/ads-video/2025/07/18/4a3ca2dcd2c25b21e85aa65c93632ac5.mp4" autoplay muted loop playsinline></video>
+            </div>
+            <div class="grid grid-cols-2 gap-2">
+                <div class="border rounded-lg p-2 text-center">
+                    <img src="https://placehold.co/200x200/f0f0f0/333?text=Product+1" alt="Product 1" class="w-full rounded-md">
+                    <p class="text-xs font-semibold my-2">Product Name</p>
+                    <button class="bg-green-500 text-white w-full py-2 rounded-lg text-sm">Buy</button>
+                </div>
+                <div class="border rounded-lg p-2 text-center">
+                    <img src="https://placehold.co/200x200/f0f0f0/333?text=Product+2" alt="Product 2" class="w-full rounded-md">
+                    <p class="text-xs font-semibold my-2">Product Name</p>
+                    <button class="bg-green-500 text-white w-full py-2 rounded-lg text-sm">Buy</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html></textarea>
+                    <button data-copy-target="code-1" class="copy-btn absolute top-3 right-3 bg-slate-700 text-white text-xs font-semibold py-1 px-3 rounded-md hover:bg-slate-600 transition-colors">Copy</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Example 2: Display with Video -->
+        <div>
+            <h2 class="text-2xl font-bold mb-4 border-b pb-2">2. Display with Video</h2>
+            <div class="grid grid-cols-1 xl:grid-cols-2 gap-8">
+                <div class="bg-white p-4 rounded-lg shadow-lg">
+                    <div class="relative w-full max-w-2xl mx-auto aspect-video bg-slate-800 rounded-lg overflow-hidden">
+                        <video class="w-full h-full object-cover" src="https://cdn2.newtail.com.br/retail_media/ads-video/2025/07/18/4a3ca2dcd2c25b21e85aa65c93632ac5.mp4" autoplay muted loop playsinline></video>
+                    </div>
+                </div>
+                <div class="relative">
+                        <textarea id="code-2" class="w-full h-full rounded-lg p-4 pr-16" rows="10" readonly><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Video Example</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="relative w-full aspect-video bg-slate-800 rounded-lg overflow-hidden m-4">
+        <video
+            class="w-full h-full object-cover"
+            src="https://cdn2.newtail.com.br/retail_media/ads-video/2025/07/18/4a3ca2dcd2c25b21e85aa65c93632ac5.mp4"
+            autoplay
+            muted
+            loop
+            playsinline>
+        </video>
+    </div>
+</body>
+</html></textarea>
+                    <button data-copy-target="code-2" class="copy-btn absolute top-3 right-3 bg-slate-700 text-white text-xs font-semibold py-1 px-3 rounded-md hover:bg-slate-600 transition-colors">Copy</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Example 3: Sponsored Brands (Small Screens) -->
+        <div>
+            <h2 class="text-2xl font-bold mb-4 border-b pb-2">3. Sponsored Brands (Small Screens)</h2>
+            <div class="grid grid-cols-1 xl:grid-cols-2 gap-8">
+                <div class="bg-white p-4 rounded-lg shadow-lg border-2 border-pink-400 w-full max-w-sm mx-auto">
+                    <img src="https://placehold.co/100x40/ffffff/000000?text=LOGO" alt="Brand Logo" class="h-8 mb-4">
+                    <div class="relative aspect-video bg-slate-800 rounded-lg overflow-hidden mb-4">
+                        <video class="w-full h-full object-cover" src="https://cdn2.newtail.com.br/retail_media/ads-video/2025/07/18/4a3ca2dcd2c25b21e85aa65c93632ac5.mp4" autoplay muted loop playsinline></video>
+                    </div>
+                    <div class="text-center">
+                        <img src="https://placehold.co/200x200/f0f0f0/333?text=Product" alt="Product" class="w-1/2 rounded-md mx-auto mb-2">
+                        <p class="font-semibold my-2">RTX 4060 ASUS Dual 8G EVO OC NVIDIA</p>
+                        <button class="bg-green-500 text-white w-full py-2 rounded-lg font-bold hover:bg-green-600">Buy</button>
+                    </div>
+                </div>
+                <div class="relative">
+                        <textarea id="code-3" class="w-full h-full rounded-lg p-4 pr-16" rows="12" readonly><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Sponsored Brands Example</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="p-4 rounded-lg border-2 border-pink-400 w-full max-w-sm bg-white m-4">
+        <img src="https://placehold.co/100x40/ffffff/000000?text=LOGO" alt="Logo" class="h-8 mb-4">
+        <div class="relative aspect-video bg-slate-800 rounded-lg overflow-hidden mb-4">
+            <video class="w-full h-full object-cover" src="https://cdn2.newtail.com.br/retail_media/ads-video/2025/07/18/4a3ca2dcd2c25b21e85aa65c93632ac5.mp4" autoplay muted loop playsinline></video>
+        </div>
+        <div class="text-center">
+            <img src="https://placehold.co/200x200/f0f0f0/333?text=Product" alt="Product" class="w-1/2 rounded-md mx-auto mb-2">
+            <p class="font-semibold my-2">Product Name</p>
+            <button class="bg-green-500 text-white w-full py-2 rounded-lg font-bold">Buy</button>
+        </div>
+    </div>
+</body>
+</html></textarea>
+                    <button data-copy-target="code-3" class="copy-btn absolute top-3 right-3 bg-slate-700 text-white text-xs font-semibold py-1 px-3 rounded-md hover:bg-slate-600 transition-colors">Copy</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    // Adds copy functionality to all buttons with the 'copy-btn' class
+    document.querySelectorAll('.copy-btn').forEach(button => {
+        button.addEventListener('click', () => {
+            const targetId = button.dataset.copyTarget;
+            const textarea = document.getElementById(targetId);
+
+            if (textarea) {
+                textarea.select();
+                // For compatibility with different browsers and iframes
+                try {
+                    document.execCommand('copy');
+                    // Visual feedback for the user
+                    const originalText = button.textContent;
+                    button.textContent = 'Copied!';
+                    setTimeout(() => {
+                        button.textContent = originalText;
+                    }, 2000); // Reverts to original text after 2 seconds
+                } catch (err) {
+                    console.error('Failed to copy text: ', err);
+                }
+                // Deselects the text after copying
+                window.getSelection().removeAllRanges();
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
