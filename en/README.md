@@ -16,3 +16,4 @@ Welcome to the VTEX Ads Retail Media API documentation.
 5.  [Data Export](./docs/5-data-export.md)
 6.  [Credit Transfer](./docs/7-credit-transfer.md)
 7.  [SSO (Single Sign-On)](./docs/8-sso.md)
+8.  [Script Agent](./docs/10-script-agent.md)
