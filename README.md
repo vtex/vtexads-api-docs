@@ -1,7 +1,3 @@
----
-layout: default
----
-
 ![VTEX Ads Logo](assets/vtex-ads-logo.png)
 
 # VTEX Ads Documentation
