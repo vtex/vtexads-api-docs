@@ -4,5 +4,10 @@ description: Documentation for VTEX Ads Retail Media API
 show_downloads: false
 github:
   is_project_page: true
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-redirect-from
+
 source: ./
 destination: ./_site
