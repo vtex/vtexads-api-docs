@@ -27,6 +27,6 @@ API for unified seller login. When calling this API, Newtail generates a redirec
 * **Success Response:** `HTTP 200 OK` with the redirect URL.
   ```json
   {
-    "redirect_url": "https://ads.newtail.com.br/sso/auth?token=GENERATED_TOKEN"
+    "redirect_url": "https://app.ads.vtex.com/sso/auth?token=GENERATED_TOKEN"
   }
   ```

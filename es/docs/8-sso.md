@@ -27,6 +27,6 @@ API para el inicio de sesión unificado del seller. Al llamar a esta API, Newtai
 * **Respuesta Exitosa:** `HTTP 200 OK` con la URL de redireccionamiento.
   ```json
   {
-    "redirect_url": "https://ads.newtail.com.br/sso/auth?token=TOKEN_GENERADO"
+    "redirect_url": "https://app.ads.vtex.com/sso/auth?token=TOKEN_GENERADO"
   }
   ```
