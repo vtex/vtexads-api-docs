@@ -5,13 +5,6 @@ show_downloads: false
 github:
   is_project_page: true
 
-# URL and Base URL for GitHub Pages
-url: "https://vtex.github.io"
-baseurl: "/vtexads-api-docs"
-
 plugins:
   - jekyll-seo-tag
   - jekyll-redirect-from
-
-source: ./
-destination: ./_site
