@@ -1,4 +1,4 @@
-![VTEX Ads Logo](../assets/vtex-ads-logo-bg-256x95.png)
+![VTEX Ads Logo](../assets/vtex-ads-logo-pink-256.png)
 
 # **Documentación de la API de Retail Media**
 
