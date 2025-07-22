@@ -72,4 +72,4 @@ Examples are organized by context (where the ad appears) and ad type:
 - **Ad Types**: Different ad types return different response structures
 - **Media Types**: IMAGE vs VIDEO affects the request parameters and response format
 
-For more detailed information about the API, refer to the [main documentation](../README.md).
+For more detailed information about the API, refer to the [main documentation](../index.md).
