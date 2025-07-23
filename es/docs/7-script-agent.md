@@ -1,10 +1,10 @@
-# VTEX Ads - Script Agent
+# 7. VTEX Ads - Script Agent
 
-## 1. Objetivo
+## 7.1. Objetivo
 
 Este documento detalla el procedimiento para la instalación del script de seguimiento de **VTEX Ads** en todas las páginas de un sitio web (excepto las páginas de checkout) a través de Google Tag Manager (GTM). La correcta implementación de este script es fundamental para la recopilación de datos de navegación que permiten la optimización y el direccionamiento de campañas de Retail Media.
 
-## 2. Datos Recopilados
+## 7.2. Datos Recopilados
 
 El script de VTEX Ads fue desarrollado para recopilar exclusivamente datos de navegación no sensibles, con el objetivo de personalizar la experiencia del usuario y optimizar campañas.
 
@@ -19,17 +19,17 @@ El script de VTEX Ads fue desarrollado para recopilar exclusivamente datos de na
 
 > **Importante:** El script **no recopila** ninguna información de identificación personal (PII), como nombre, correo electrónico, CPF, teléfono, dirección o datos de pago. La recopilación de datos cumple con las principales leyes de protección de datos.
 
-## 3. Datos del Script
+## 7.3. Datos del Script
 
 El script debe cargarse de forma asíncrona para no afectar el tiempo de carga de la página.
 
 -   **URL del Script:** `https://cdn.newtail.com.br/retail-media/scripts/vtexads-agent.1.0.0.js`
 
-## 4. Paso a Paso para la Implementación a través de Google Tag Manager (GTM)
+## 7.4. Paso a Paso para la Implementación a través de Google Tag Manager (GTM)
 
 Para garantizar que el script se ejecute lo antes posible en la carga de la página, recomendamos utilizar el activador de **Inicialización (Initialization)**.
 
-### Paso 4.1: Crear la Etiqueta de HTML Personalizado
+### Paso 7.4.1: Crear la Etiqueta de HTML Personalizado
 
 1.  Acceda a su contenedor de GTM y vaya a la sección **"Etiquetas"**.
 2.  Haga clic en **"Nueva"** para crear una nueva etiqueta.
@@ -40,12 +40,12 @@ Para garantizar que el script se ejecute lo antes posible en la carga de la pág
     <script type="text/javascript" async src="https://cdn.newtail.com.br/retail-media/scripts/vtexads-agent.1.0.0.js"></script>
     ```
 
-### Paso 4.2: Configurar el Activador Principal
+### Paso 7.4.2: Configurar el Activador Principal
 
 1.  Debajo de la configuración de la etiqueta, haga clic en **"Activación"**.
 2.  Seleccione el activador **"Initialization - All Pages"** (Inicialización - Todas las Páginas). Este activador garantiza que el script se dispare antes que la mayoría de las otras etiquetas, en todas las páginas.
 
-### Paso 4.3: Crear y Añadir una Excepción de Activación
+### Paso 7.4.3: Crear y Añadir una Excepción de Activación
 
 Para evitar que el script se ejecute en las páginas de checkout, crearemos una excepción.
 
@@ -59,12 +59,12 @@ Para evitar que el script se ejecute en las páginas de checkout, crearemos una 
     -   `Page URL` | `coincide con RegEx (sin distinguir mayúsculas y minúsculas)` | `/checkout/|/orderPlaced/`
 7.  Guarde el nuevo activador de excepción. Se agregará automáticamente a su etiqueta.
 
-### Paso 4.4: Guardar y Publicar
+### Paso 7.4.4: Guardar y Publicar
 
 1.  Guarde la etiqueta recién creada.
 2.  Envíe y publique los cambios en su contenedor de GTM.
 
-## 5. Configuración de la Sesión del Usuario
+## 7.5. Configuración de la Sesión del Usuario
 
 Para que la plataforma VTEX Ads pueda correlacionar correctamente las interacciones del usuario, es necesario informar cuál es el identificador de sesión utilizado por su e-commerce.
 

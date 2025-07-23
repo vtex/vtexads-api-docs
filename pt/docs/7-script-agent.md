@@ -1,10 +1,10 @@
-# VTEX Ads - Script Agent
+# 7. VTEX Ads - Script Agent
 
-## 1\. Objetivo
+## 7.1. Objetivo
 
 Este documento detalha o procedimento para a instalação do script de rastreamento da **VTEX Ads** em todas as páginas de um site (exceto as páginas de checkout) através do Google Tag Manager (GTM). A correta implementação deste script é fundamental para a coleta de dados de navegação que permitem a otimização e o direcionamento de campanhas de Retail Media.
 
-## 2\. Dados Coletados
+## 7.2. Dados Coletados
 
 O script da VTEX Ads foi desenvolvido para coletar exclusivamente dados de navegação não sensíveis, com o objetivo de personalizar a experiência do usuário e otimizar campanhas.
 
@@ -25,18 +25,18 @@ O script da VTEX Ads foi desenvolvido para coletar exclusivamente dados de naveg
 
 > **Importante:** O script **não coleta** nenhuma informação pessoalmente identificável (PII), como nome, e-mail, CPF, telefone, endereço ou dados de pagamento. A coleta de dados está em conformidade com as principais leis de proteção de dados.
 
-## 3\. Dados do Script
+## 7.3. Dados do Script
 
 O script deve ser carregado de forma assíncrona para não impactar o tempo de carregamento da página.
 
 -   **URL do Script:** `https://cdn.newtail.com.br/retail-media/scripts/vtexads-agent.1.0.0.js`
 
 
-## 4\. Passo a Passo para Implementação via Google Tag Manager (GTM)
+## 7.4. Passo a Passo para Implementação via Google Tag Manager (GTM)
 
 Para garantir que o script seja executado o mais cedo possível no carregamento da página, recomendamos o uso do acionador de **Inicialização (Initialization)**.
 
-### Passo 4.1: Criar a Tag de HTML Personalizado
+### Passo 7.4.1: Criar a Tag de HTML Personalizado
 
 1.  Acesse seu contêiner do GTM e vá para a seção **"Tags"**.
 
@@ -53,14 +53,14 @@ Para garantir que o script seja executado o mais cedo possível no carregamento 
     ```
 
 
-### Passo 4.2: Configurar o Acionador Principal
+### Passo 7.4.2: Configurar o Acionador Principal
 
 1.  Abaixo da configuração da tag, clique em **"Acionamento"**.
 
 2.  Selecione o acionador **"Initialization - All Pages"** (Inicialização - Todas as Páginas). Este acionador garante que o script seja disparado antes da maioria das outras tags, em todas as páginas.
 
 
-### Passo 4.3: Criar e Adicionar uma Exceção de Acionamento
+### Passo 7.4.3: Criar e Adicionar uma Exceção de Acionamento
 
 Para evitar que o script seja executado nas páginas de checkout, criaremos uma exceção.
 
@@ -83,14 +83,14 @@ Para evitar que o script seja executado nas páginas de checkout, criaremos uma 
 7.  Salve o novo acionador de exceção. Ele será automaticamente adicionado à sua tag.
 
 
-### Passo 4.4: Salvar e Publicar
+### Passo 7.4.4: Salvar e Publicar
 
 1.  Salve a tag recém-criada.
 
 2.  Envie e publique as alterações no seu contêiner do GTM.
 
 
-## 5\. Configuração da Sessão do Usuário
+## 7.5. Configuração da Sessão do Usuário
 
 Para que a plataforma VTEX Ads possa correlacionar corretamente as interações do usuário, é necessário informar qual é o identificador de sessão utilizado pelo seu e-commerce.
 

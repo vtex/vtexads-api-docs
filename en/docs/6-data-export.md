@@ -1,8 +1,8 @@
-## 5. Data Export
+## 6. Data Export
 
 Data export allows you to receive detailed information about events and aggregated data systematically and periodically. The integration occurs through an S3 connection, and the data is delivered in specific formats for each type of export.
 
-### 5.1. Reports
+### 6.1. Reports
 
 In addition to exporting via S3, it is possible to extract reports via the API. The routes return JSON by default, but can be exported as XLSX files by including the `download=true` parameter in the query.
 
@@ -13,7 +13,7 @@ In addition to exporting via S3, it is possible to extract reports via the API. 
 *  `GET /campaign/:id`: Detailed campaign report [[Example]](../../examples/EXPORT_CAMPAIGN_DATA.md)
 *  `GET /ad/results/v2`: Performance report for individual ads  [[Example]](../../examples/EXPORT_ADS_DATA.md)
 
-### 5.2. Data Export
+### 6.2. Data Export
 
 The integration will always occur using an S3 (or compatible) connection that must be provided by the data recipient. The credentials must be passed to the Newtail team securely.
 

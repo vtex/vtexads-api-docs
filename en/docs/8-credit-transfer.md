@@ -1,4 +1,4 @@
-## 7. Credit Transfer
+## 8. Credit Transfer
 
 Credit transfer is the flow that allows the marketplace to transfer advertising credits to its sellers. This documentation details the endpoints that the marketplace must implement and the webhook it must consume to integrate with VTEXAds.
 

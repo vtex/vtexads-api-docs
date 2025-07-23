@@ -1,10 +1,10 @@
-# VTEX Ads - Script Agent
+# 7. VTEX Ads - Script Agent
 
-## 1. Objective
+## 7.1. Objective
 
 This document details the procedure for installing the **VTEX Ads** tracking script on all pages of a website (except for checkout pages) using Google Tag Manager (GTM). The correct implementation of this script is essential for collecting browsing data that allows for the optimization and targeting of Retail Media campaigns.
 
-## 2. Data Collected
+## 7.2. Data Collected
 
 The VTEX Ads script was developed to exclusively collect non-sensitive browsing data, with the aim of personalizing the user experience and optimizing campaigns.
 
@@ -19,17 +19,17 @@ The VTEX Ads script was developed to exclusively collect non-sensitive browsing 
 
 > **Important:** The script **does not collect** any personally identifiable information (PII), such as name, email, CPF, phone number, address, or payment data. Data collection complies with major data protection laws.
 
-## 3. Script Details
+## 7.3. Script Details
 
 The script should be loaded asynchronously so as not to impact the page load time.
 
 -   **Script URL:** `https://cdn.newtail.com.br/retail-media/scripts/vtexads-agent.1.0.0.js`
 
-## 4. Step-by-Step Guide for Implementation via Google Tag Manager (GTM)
+## 7.4. Step-by-Step Guide for Implementation via Google Tag Manager (GTM)
 
 To ensure the script runs as early as possible during page load, we recommend using the **Initialization** trigger.
 
-### Step 4.1: Create the Custom HTML Tag
+### Step 7.4.1: Create the Custom HTML Tag
 
 1.  Access your GTM container and go to the **"Tags"** section.
 2.  Click **"New"** to create a new tag.
@@ -40,12 +40,12 @@ To ensure the script runs as early as possible during page load, we recommend us
     <script type="text/javascript" async src="https://cdn.newtail.com.br/retail-media/scripts/vtexads-agent.1.0.0.js"></script>
     ```
 
-### Step 4.2: Configure the Main Trigger
+### Step 7.4.2: Configure the Main Trigger
 
 1.  Below the tag configuration, click on **"Triggering"**.
 2.  Select the **"Initialization - All Pages"** trigger. This trigger ensures that the script is fired before most other tags on all pages.
 
-### Step 4.3: Create and Add a Trigger Exception
+### Step 7.4.3: Create and Add a Trigger Exception
 
 To prevent the script from running on checkout pages, we will create an exception.
 
@@ -59,12 +59,12 @@ To prevent the script from running on checkout pages, we will create an exceptio
     -   `Page URL` | `matches RegEx (ignore case)` | `/checkout/|/orderPlaced/`
 7.  Save the new exception trigger. It will be automatically added to your tag.
 
-### Step 4.4: Save and Publish
+### Step 7.4.4: Save and Publish
 
 1.  Save the newly created tag.
 2.  Submit and publish the changes in your GTM container.
 
-## 5. User Session Configuration
+## 7.5. User Session Configuration
 
 For the VTEX Ads platform to correctly correlate user interactions, it is necessary to inform which session identifier is used by your e-commerce.
 

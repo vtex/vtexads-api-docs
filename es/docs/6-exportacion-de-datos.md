@@ -1,4 +1,4 @@
-## 5. Exportación de Datos
+## 6. Exportación de Datos
 
 La exportación de datos le permite recibir información detallada sobre eventos y datos agregados de forma sistemática y periódica. La integración se realiza a través de una conexión S3, y los datos se entregan en formatos específicos para cada tipo de exportación.
 
