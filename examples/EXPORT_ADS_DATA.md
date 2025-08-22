@@ -20,8 +20,8 @@ curl --location 'https://api-retail-media.newtail.com.br/ad/results/v2?start_dat
 | `campaign_id`           | Não         | Filtra os anúncios pelo ID da campanha.                                   |
 | `advertiser_id`         | Não         | Filtra os anúncios pelo ID do anunciante.                                 |
 | `product_sku`           | Não         | Filtra os anúncios por um SKU de produto.                                 |
-| `ad_status`             | Não         | Filtra anúncios pelo status.                                              |
-| `ad_type`               | Não         | Filtra pelo tipo de anúncio.                                              |
+| `ad_status`             | Não         | Filtra anúncios pelo status. Valores possíveis: `enabled`, `paused`, `rejected`, `pending_review`, `stock_out`, `invalid_cost`. |
+| `ad_type`               | Não         | Filtra pelo tipo de anúncio. Valores possíveis: `banner`, `product`, `sponsored_brand`, `digital_signage`, `banner_video`, `sponsored_brand_video` . |
 | `targeting_type`        | Não         | Filtra pelo tipo de segmentação.                                          |
 | `show_inactive`         | Não         | Se `true`, inclui os anúncios que estão pausados.                         |
 | `account_info`          | Não         | Se `true`, inclui informações detalhadas da conta no resultado. Padrão: `false`. |
@@ -31,6 +31,10 @@ curl --location 'https://api-retail-media.newtail.com.br/ad/results/v2?start_dat
 | `order_by`              | Não         | Campo para ordenação dos resultados. Valores possíveis: `ad_type`, `ad_status`, `impressions`, `conversion_rate`, `ctr`, `income`, `total_spent`, `roas`, `conversions`, `total_conversions_item_quantity`. |
 | `order_direction`       | Não         | Direção da ordenação. Valores possíveis: `asc` (crescente) ou `desc` (decrescente). |
 | `download`              | Não         | Se `true`, retorna um buffer de arquivo XLSX para download ao invés de JSON. |
+
+```
+Important: Paused ads are excluded from the default response. To include paused ads in your query, use the following parameter: `"show_inactive": true`
+```
 
 ## Response
 
