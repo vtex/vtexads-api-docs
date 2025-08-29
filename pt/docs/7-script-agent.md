@@ -29,7 +29,7 @@ O script da VTEX Ads foi desenvolvido para coletar exclusivamente dados de naveg
 
 O script deve ser carregado de forma assíncrona para não impactar o tempo de carregamento da página.
 
--   **URL do Script:** `https://cdn.newtail.com.br/retail-media/scripts/vtexads-agent.1.0.0.js`
+-   **URL do Script:** `https://cdn.newtail.com.br/retail-media/scripts/vtexrma-agent.1.0.0.js`
 
 
 ## 7.4. Passo a Passo para Implementação via Google Tag Manager (GTM)
@@ -49,7 +49,7 @@ Para garantir que o script seja executado o mais cedo possível no carregamento 
 5.  No campo de HTML, insira o seguinte código:
 
     ```
-    <script type="text/javascript" async src="https://cdn.newtail.com.br/retail-media/scripts/vtexads-agent.1.0.0.js"></script>
+    <script type="text/javascript" async src="https://cdn.newtail.com.br/retail-media/scripts/vtexrma-agent.1.0.0.js"></script>
     ```
 
 
