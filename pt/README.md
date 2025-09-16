@@ -17,6 +17,7 @@ Bem-vindo à documentação da API de Retail Media da VTEX Ads.
    - [5.4. Integração de Audiências](./docs/5.4-integracao-de-audiencias.md)
    - [5.5. Consulta de Anúncios](./docs/5.5-consulta-de-anuncios.md)
    - [5.6. Eventos](./docs/5.6-eventos.md)
+   - [5.7. Integração Transparente](docs/5.7-integracao-transparente.md)
 6. [Exportação de Dados](./docs/6-exportacao-de-dados.md)
 7. [Script Agent](./docs/7-script-agent.md)
 8. [Repasse de Créditos](./docs/8-repasse.md)
