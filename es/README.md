@@ -16,6 +16,7 @@ Bienvenido a la documentación de la API de Retail Media de VTEX Ads.
    - [5.3. Sincronización de Catálogo](./docs/5.3-sincronizacion-de-catalogo.md)
    - [5.4. Integración de Audiencias](./docs/5.4-integracion-de-audiencias.md)
    - [5.5. Consulta de Anuncios](./docs/5.5-consulta-de-anuncios.md)
+   - [5.5.1. Recomendación de Nombres de Placements](./docs/5.5.1-recomendacion-de-nombres-de-placements.md)
    - [5.6. Eventos](./docs/5.6-eventos.md)
    - [5.7. Integración Transparente](docs/5.7-integracion-transparente.md)
 6. [Exportación de Datos](./docs/6-exportacion-de-datos.md)
