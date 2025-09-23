@@ -7,4 +7,5 @@ Esta sección proporciona información detallada sobre cómo integrarse con la p
 - [5.3. Sincronización de Catálogo](./5.3-sincronizacion-de-catalogo.md): Mantenga su catálogo de productos e inventario sincronizado con VTEX Ads.
 - [5.4. Integración de Audiencias](./5.4-integracion-de-audiencias.md): Envíe datos de audiencia para mejorar la segmentación y la relevancia de los anuncios.
 - [5.5. Consulta de Anuncios](./5.5-consulta-de-anuncios.md): Solicite a la API los anuncios que deben ser exhibidos en diferentes páginas y contextos.
+- [5.5.1. Recomendación de Nombres de Placements](./5.5.1-recomendacion-de-nombres-de-placements.md): Estándar recomendado de nombres de placements para una medición precisa.
 - [5.6. Eventos](./5.6-eventos.md): Notifique a la API sobre todas las interacciones del usuario con los anuncios y las conversiones.

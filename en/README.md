@@ -16,6 +16,7 @@ Welcome to the VTEX Ads Retail Media API documentation.
    - [5.3. Catalog Synchronization](./docs/5.3-catalog-synchronization.md)
    - [5.4. Audience Integration](./docs/5.4-audience-integration.md)
    - [5.5. Ad Query](./docs/5.5-ad-query.md)
+   - [5.5.1. Placement Naming](./docs/5.5.1-placement-naming.md)
    - [5.6. Events](./docs/5.6-events.md)
    - [5.7. Transparent Integration](docs/5.7-transparent-integration.md)
 6. [Data Export](./docs/6-data-export.md)
