@@ -3,7 +3,7 @@
 O repasse de créditos é o fluxo que permite ao marketplace transferir créditos de anúncio para seus sellers. Esta documentação detalha os endpoints que o marketplace deve implementar e o webhook que deve consumir para realizar a integração com a VTEXAds.
 
 <div align="center">
-  <img src="../../diagrams/images/credit-transfer.png" alt="Fluxo de Repasse de Créditos" />
+  <img src="../../diagrams/images/pt/credit-transfer.png" alt="Fluxo de Repasse de Créditos" />
 </div>
 
   * **Endpoints a serem implementados pelo Marketplace (Autenticação: Basic Auth):**
