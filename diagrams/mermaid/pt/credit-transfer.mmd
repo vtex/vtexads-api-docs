@@ -15,20 +15,20 @@ sequenceDiagram
     participant VTEXAds
     participant Seller
 
-    Seller->>VTEXAds: Request to see amount available to use in ADs
+    Seller->>VTEXAds: Solicitar valor disponível para usar em Anúncios
     VTEXAds->>Marketplace: GET /checking_account?seller_id=SELLER_ID
     Marketplace-->>VTEXAds: 200 OK { "total": "1111.00" }
-    VTEXAds-->>Seller: Show amount
+    VTEXAds-->>Seller: Mostrar valor
 
-    Seller->>VTEXAds: Request to transfer certain amount to ADs
+    Seller->>VTEXAds: Solicitar transferência de determinado valor para Anúncios
     VTEXAds->>Marketplace: POST /checking_account/transfer
-    alt Synchronous Success
+    alt Sucesso Síncrono
         Marketplace-->>VTEXAds: 201 Created { "transaction_id": "...", "status": "success" }
-    else Synchronous Failure
+    else Falha Síncrona
         Marketplace-->>VTEXAds: 400 Bad Request { "transaction_id": "...", "status": "failure", "message": "..." }
-    else Asynchronous Webhook
+    else Webhook Assíncrono
         Marketplace-->>VTEXAds: 202 Accepted { "transaction_id": "...", "status": "processing" }
         Marketplace->>VTEXAds: POST /webhook/marketplace/transfers <br/>{ "transaction_id": "...", "status": "success/failure", ... }
         VTEXAds-->>Marketplace: 204 OK
     end
-    VTEXAds-->>Seller: Confirm if transfer was success or fail
+    VTEXAds-->>Seller: Confirmar se transferência foi sucesso ou falha

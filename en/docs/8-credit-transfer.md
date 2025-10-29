@@ -3,7 +3,7 @@
 Credit transfer is the flow that allows the marketplace to transfer advertising credits to its sellers. This documentation details the endpoints that the marketplace must implement and the webhook it must consume to integrate with VTEXAds.
 
 <div align="center">
-  <img src="../../diagrams/images/credit-transfer.png" alt="Credit Transfer Flow" />
+  <img src="../../diagrams/images/en/credit-transfer.png" alt="Credit Transfer Flow" />
 </div>
 
   * **Endpoints to be implemented by the Marketplace (Authentication: Basic Auth):**

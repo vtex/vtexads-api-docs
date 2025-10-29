@@ -4,7 +4,7 @@ Esta seção fornece informações detalhadas sobre como se integrar à platafor
 
 ## 5.0 Visão Geral do Fluxo de Integração
 
-<img src="../../diagrams/images/integration-end-to-end.png" alt="Fluxo completo de integração com VTEX Ads" />
+<img src="../../diagrams/images/pt/integration-end-to-end.png" alt="Fluxo completo de integração com VTEX Ads" />
 
 O fluxo de integração completo é dividido em quatro fases principais que se retroalimentam continuamente:
 

@@ -1,0 +1,22 @@
+%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#ffffff','primaryBorderColor':'#333','background':'#ffffff'}}}%%
+graph LR
+    %% Etapa 1: Criação de Campanha
+    CreateCampaign[1. Criação de Campanha]
+
+    %% Etapa 2: Consulta de Anúncios
+    CreateCampaign --> AdRequest[2. Consulta de Anúncios]
+
+    %% Etapa 3: Disparo de Eventos
+    AdRequest --> SendEvents[3. Disparo de Eventos]
+
+    %% Etapa 4: Disparo de Conversão
+    SendEvents --> ConversionEvent[4. Disparo de Conversão]
+
+    %% Etapa 5: Cobrança e Mensuração
+    ConversionEvent --> Billing[5. Cobrança e Mensuração]
+
+    %% Ciclo contínuo
+    Billing -.->|Otimização| CreateCampaign
+
+    %% Estilos
+    classDef default fill:#ffffff,stroke:#333,stroke-width:2px
