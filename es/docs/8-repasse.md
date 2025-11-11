@@ -3,7 +3,7 @@
 La transferencia de créditos es el flujo que permite al marketplace transferir créditos de publicidad a sus sellers. Esta documentación detalla los endpoints que el marketplace debe implementar y el webhook que debe consumir para realizar la integración con VTEXAds.
 
 <div align="center">
-  <img src="../../diagrams/images/credit-transfer.png" alt="Flujo de Transferencia de Créditos" />
+  <img src="../../diagrams/images/es/credit-transfer.png" alt="Flujo de Transferencia de Créditos" />
 </div>
 
   * **Endpoints a ser implementados por el Marketplace (Autenticación: Basic Auth):**
