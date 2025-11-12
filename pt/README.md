@@ -23,3 +23,4 @@ Bem-vindo à documentação da API de Retail Media da VTEX Ads.
 7. [Script Agent](./docs/7-script-agent.md)
 8. [Repasse de Créditos](./docs/8-repasse.md)
 9. [SSO (Single Sign-On)](./docs/9-sso.md)
+10. [Janela de Atribuição e Modelos de Conversão](./docs/10-janela-atribuicao.md)

@@ -23,3 +23,4 @@ Welcome to the VTEX Ads Retail Media API documentation.
 7. [Script Agent](./docs/7-script-agent.md)
 8. [Credit Transfer](./docs/8-credit-transfer.md)
 9. [SSO (Single Sign-On)](./docs/9-sso.md)
+10. [Attribution Window and Conversion Models](./docs/10-attribution-window.md)
