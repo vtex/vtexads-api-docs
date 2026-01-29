@@ -1,0 +1,31 @@
+%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#ffffff','primaryBorderColor':'#333','background':'#ffffff'}}}%%
+graph LR
+    Start[Kickoff]
+
+    %% Fase 1: Integración de Catálogo
+    Start --> CatalogIntegration[Integración de Catálogo]
+
+    %% Integración Opcional de Audiencias
+    Start -.->|Opcional| AudienceIntegration[Integración de Audiencias]
+
+    %% Fase 2: Integración de Anuncios
+    CatalogIntegration --> AdIntegration[Integración de Anuncios<br/>Consulta y Renderización]
+    AudienceIntegration -.-> AdIntegration
+
+    %% Fase 3: Integración de Eventos
+    AdIntegration --> EventIntegration[Integración de Eventos<br/>Impresión, Visualización, Click]
+
+    %% Fase 4: Integración de Conversión
+    EventIntegration --> ConversionIntegration[Integración de Conversión]
+
+    %% Fase 5: Homologación
+    ConversionIntegration --> Homologation[Homologación]
+
+    %% Fase 6: Capacitación
+    Homologation --> Training[Capacitación]
+
+    %% Fase 7: Go Live
+    Training --> GoLive[Go Live]
+
+    %% Estilos
+    classDef default fill:#ffffff,stroke:#333,stroke-width:2px

@@ -1,0 +1,22 @@
+%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#ffffff','primaryBorderColor':'#333','background':'#ffffff'}}}%%
+graph LR
+    %% Step 1: Campaign Creation
+    CreateCampaign[1. Campaign Creation]
+
+    %% Step 2: Ad Request
+    CreateCampaign --> AdRequest[2. Ad Request]
+
+    %% Step 3: Event Tracking
+    AdRequest --> SendEvents[3. Event Tracking]
+
+    %% Step 4: Conversion Event
+    SendEvents --> ConversionEvent[4. Conversion Event]
+
+    %% Step 5: Billing and Measurement
+    ConversionEvent --> Billing[5. Billing and Measurement]
+
+    %% Continuous cycle
+    Billing -.->|Optimization| CreateCampaign
+
+    %% Styles
+    classDef default fill:#ffffff,stroke:#333,stroke-width:2px

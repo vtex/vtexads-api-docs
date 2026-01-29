@@ -73,3 +73,11 @@ Examples are organized by context (where the ad appears) and ad type:
 - **Media Types**: IMAGE vs VIDEO affects the request parameters and response format
 
 For more detailed information about the API, refer to the [main documentation](../README.md).
+
+## Events
+
+| Example | Description |
+|---------|-------------|
+| [EVENTS_IMPRESSIONS_VIEWS_CLICKS_BROWSER](EVENTS_IMPRESSIONS_VIEWS_CLICKS_BROWSER.md) | Send impression, view, and click events from the browser (Beacon + fetch fallback) |
+| [EVENTS_CONVERSION_BROWSER](EVENTS_CONVERSION_BROWSER.md) | Send conversion events from the browser (Beacon + fetch fallback) |
+| [EVENTS_CONVERSION_CURL](EVENTS_CONVERSION_CURL.md) | Send conversion events using cURL |

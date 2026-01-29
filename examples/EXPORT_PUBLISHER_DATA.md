@@ -2,7 +2,7 @@
 
 This endpoint allows you to retrieve information about the publisher. The data is returned in JSON format by default, but can be exported as XLSX by including the `download=true` parameter in the query string.
 
-🔹 Important: Only available in the advertiser view.
+🔹 Important: Only available in the advertiser view (advertiser account).
 
 ## Request
 
@@ -13,20 +13,20 @@ curl --location 'https://api-retail-media.newtail.com.br/report/v2/publishers?st
 --header 'Content-Type: application/json'
 ```
 
-## Parâmetros da Query
+## Query Parameters
 
-| Parâmetro         | Obrigatório | Descrição                                                                 |
-|-------------------|-------------|---------------------------------------------------------------------------|
-| `start_date`      | Sim         | Data de início das métricas no formato `YYYY-MM-DD`.                      |
-| `end_date`        | Sim         | Data de fim das métricas no formato `YYYY-MM-DD`.                         |
-| `publisher_name`  | Não         | Filtra os resultados pelo nome do publisher.                              |
-| `account_info`    | Não         | Se `true`, inclui informações detalhadas da conta no resultado. Padrão: `false`. |
-| `page`            | Não         | Número da página dos resultados. Padrão: `1`.                             |
-| `quantity`        | Não         | Quantidade de itens por página. Padrão: `100`.                            |
-| `count`           | Não         | Se `true`, retorna o total de registros disponíveis. Padrão: `false`.     |
-| `order_by`        | Não         | Campo para ordenação dos resultados. Valores possíveis: `name`, `balance`, `total_daily_budget`, `total_campaigns`, `impressions`, `clicks`, `ctr`, `total_spent`, `conversions`, `conversion_rate`, `income`, `roas`. |
-| `order_direction` | Não         | Direção da ordenação. Valores possíveis: `asc` (crescente) ou `desc` (decrescente). |
-| `download`        | Não         | Se `true`, retorna um buffer de arquivo XLSX para download ao invés de JSON. |
+| Parameter         | Required    | Description                                                                 |
+|-------------------|-------------|-----------------------------------------------------------------------------|
+| `start_date`      | Yes         | Start date for metrics in YYYY-MM-DD format.                                |
+| `end_date`        | Yes         | End date for metrics in YYYY-MM-DD format.                                  |
+| `publisher_name`  | No          | Filters results by publisher name.                                          |
+| `account_info`    | No          | If `true`, includes detailed account information in the result. Default: `false`. |
+| `page`            | No          | Page number of results. Default: `1`.                                       |
+| `quantity`        | No          | Number of items per page. Default: `100`. |
+| `count`           | No          | If `true`, returns the total number of records available. Default: `false`. |
+| `order_by`        | No          | Field for sorting results. Possible values: `name`, `balance`, `total_daily_budget`, `total_campaigns`, `impressions`, `clicks`, `ctr`, `total_spent`, `conversions`, `conversion_rate`, `income`, `roas`. |
+| `order_direction` | No          | Sort direction. Possible values: `asc` (ascending) or `desc` (descending).  |
+| `download`        | No          | If `true`, returns an XLSX file buffer for download instead of JSON.        |
 
 ## Response
 
@@ -62,8 +62,70 @@ curl --location 'https://api-retail-media.newtail.com.br/report/v2/publishers?st
           "conversions_quantity": "214",
           "roas": "433.92",
           "adcost": "0.23"
+      },
+      "account_logo": "https://cdn.newtail.com.br/accounts/4852asd4q-3b0a-11ef-b7a2-014ea2680b7e/assets/publisher-logo.png",
+      "account_theme": {
+        "primary_color": "#00B941",
+        "header_color": "#00B941",
+        "second_color": "#00B941",
+        "dark_color": "#00B941"
       }
     }
   ]
 }
 ```
+
+## Response Body
+
+| Field         | Type   | Description                          |
+| ------------- | ------ | ------------------------------------ |
+| `total`       | Number | Total number of publishers available |
+| `pages`       | Number | Total number of pages for pagination |
+| `currentPage` | Number | Current page number                  |
+| `data`        | Array  | Array of publisher objects           |
+
+### Publisher Object Fields
+
+| Field                 | Type   | Description                 |
+| --------------------- | ------ | --------------------------- |
+| `id`                  | String | Unique publisher identifier |
+| `name`                | String | Publisher name              |
+| `account_id`          | String | Account identifier          |
+| `checking_account_id` | String | Checking account identifier |
+| `metrics`             | Object | Performance metrics object  |
+| `account_logo`        | String | URL of the publisher's logo |
+| `account_theme`       | Object | Theme configuration object  |
+
+### Metrics Object Fields
+
+| Field                              | Type   | Description                       |
+| ---------------------------------- | ------ | --------------------------------- |
+| `total_campaigns`                  | String | Total number of campaigns         |
+| `total_daily_budget`               | String | Total daily budget amount         |
+| `balance`                          | String | Account balance                   |
+| `publisher_id`                     | String | Publisher identifier              |
+| `impressions`                      | String | Total number of ad impressions    |
+| `views`                            | String | Total number of ad views          |
+| `clicks`                           | String | Total number of ad clicks         |
+| `conversions`                      | String | Total number of conversions       |
+| `conversion_rate`                  | String | Conversion rate percentage        |
+| `total_conversions_items_quantity` | String | Total quantity of converted items |
+| `ctr`                              | String | Click-through rate percentage     |
+| `income`                           | String | Total income generated            |
+| `ecpm`                             | String | Effective cost per mille (CPM)    |
+| `total_spent`                      | String | Total amount spent                |
+| `cpa`                              | String | Cost per acquisition              |
+| `avg_cpc`                          | String | Average cost per click            |
+| `avg_cpm`                          | String | Average cost per mille            |
+| `conversions_quantity`             | String | Total quantity of converted items |
+| `roas`                             | String | Return on ad spend                |
+| `adcost`                           | String | Ad cost                           |
+
+### Account Theme Object Fields
+
+| Field           | Type   | Description                       |
+| --------------- | ------ | --------------------------------- |
+| `primary_color` | String | Primary color code (hex format)   |
+| `header_color`  | String | Header color code (hex format)    |
+| `second_color`  | String | Secondary color code (hex format) |
+| `dark_color`    | String | Dark color code (hex format)      |

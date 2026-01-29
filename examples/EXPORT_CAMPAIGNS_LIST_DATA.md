@@ -10,23 +10,23 @@ curl --location 'https://api-retail-media.newtail.com.br/campaign/v2?start_date=
 --header 'x-api-key: YYYY' \
 --header 'Content-Type: application/json'
 ```
-## Parâmetros da Query
+## Query Parameters
 
-| Parâmetro         | Obrigatório | Descrição                                                                 |
-|-------------------|-------------|---------------------------------------------------------------------------|
-| `start_date`      | Sim         | Data de início das métricas no formato `YYYY-MM-DD`.                      |
-| `end_date`        | Sim         | Data de fim das métricas no formato `YYYY-MM-DD`.                         |
-| `status`          | Não         | Filtra pelo status da campanha.                                           |
-| `advertiser_id`   | Não         | Filtra campanhas por ID do anunciante.                                    |
-| `ad_type`         | Não         | Filtra pelo tipo de anúncio.                                              |
-| `name`            | Não         | Busca campanhas pelo nome.                                                |
-| `account_info`    | Não         | Se `true`, inclui informações detalhadas da conta no resultado. Padrão: `false`. |
-| `page`            | Não         | Número da página dos resultados. Padrão: `1`.                             |
-| `quantity`        | Não         | Quantidade de itens por página. Padrão: `100`.                            |
-| `count`           | Não         | Se `true`, retorna o total de registros disponíveis. Padrão: `false`.     |
-| `order_by`        | Não         | Campo para ordenação dos resultados. Valores possíveis: `name`, `impressions`, `clicks`, `ctr`, `conversions`, `conversion_rate`, `income`, `roas`, `created_at`, `start_at`, `daily_budget`, `ad_type`, `advertiser_name`, `status`. |
-| `order_direction` | Não         | Direção da ordenação. Valores possíveis: `asc` (crescente) ou `desc` (decrescente). |
-| `download`        | Não         | Se `true`, retorna um buffer de arquivo XLSX para download ao invés de JSON. |
+| Parameter         | Required | Description                                                                 |
+|-------------------|----------|-------------------------------------------------------------------------|
+| `start_date`      | Yes      | Start date for metrics in `YYYY-MM-DD` format.                          |
+| `end_date`        | Yes      | End date for metrics in `YYYY-MM-DD` format.                            |
+| `status`          | No       | Filters by campaign status.                                             |
+| `advertiser_id`   | No       | Filters campaigns by advertiser ID.                                     |
+| `ad_type`         | No       | Filters by ad type.                                                      |
+| `name`            | No       | Searches campaigns by name.                                              |
+| `account_info`    | No       | If `true`, includes detailed account information in the result. Default: `false`. |
+| `page`            | No       | Page number of the results. Default: `1`.                               |
+| `quantity`        | No       | Number of items per page. Default: `100`.                               |
+| `count`           | No       | If `true`, returns the total number of available records. Default: `false`. |
+| `order_by`        | No       | Field for sorting results. Possible values: `name`, `impressions`, `clicks`, `ctr`, `conversions`, `conversion_rate`, `income`, `roas`, `created_at`, `start_at`, `daily_budget`, `ad_type`, `advertiser_name`, `status`. |
+| `order_direction` | No       | Sort direction. Possible values: `asc` (ascending) or `desc` (descending). |
+| `download`        | No       | If `true`, returns an XLSX file buffer for download instead of JSON. |
 
 ## Response
 
@@ -94,3 +94,83 @@ curl --location 'https://api-retail-media.newtail.com.br/campaign/v2?start_date=
   ]
 }
 ```
+
+## Response Body
+
+| Field         | Type   | Description                          |
+| ------------- | ------ | ------------------------------------ |
+| `total`       | Number | Total number of campaigns            |
+| `pages`       | Number | Total number of pages for pagination |
+| `currentPage` | Number | Current page number                  |
+| `data`        | Array  | Array of campaign objects            |
+
+### Campaign Object Fields
+
+| Field                   | Type        | Description                            |
+| ----------------------- | ----------- | -------------------------------------- |
+| `id`                    | String      | Unique campaign identifier             |
+| `advertiser_id`         | String      | Advertiser identifier                  |
+| `name`                  | String      | Campaign name                          |
+| `status`                | String      | Campaign status                        |
+| `type`                  | String      | Campaign type                          |
+| `settings`              | Object      | Campaign settings object               |
+| `start_at`              | String      | Campaign start date (ISO format)       |
+| `end_at`                | String      | Campaign end date (ISO format)         |
+| `disabled_at`           | String      | Campaign disabled date (ISO format)    |
+| `created_at`            | String      | Campaign creation date (ISO format)    |
+| `updated_at`            | String      | Campaign last update date (ISO format) |
+| `deleted_at`            | String      | Campaign deletion date (ISO format)    |
+| `description`           | String      | Campaign description                   |
+| `publisher_id`          | String      | Publisher identifier                   |
+| `ad_type`               | String      | Advertisement type                     |
+| `cid`                   | Number      | Campaign internal ID                   |
+| `seller_id`             | String      | Seller identifier (if applicable)      |
+| `target`                | String      | Campaign target (if applicable)        |
+| `network_id`            | String      | Network identifier (if applicable)     |
+| `audience_id`           | String      | Audience identifier (if applicable)    |
+| `targeting_type`        | String      | Targeting type                         |
+| `strategy_type`         | String      | Campaign strategy type                 |
+| `total_budget`          | String      | Total campaign budget                  |
+| `active`                | Boolean     | Whether campaign is active             |
+| `advertiser_name`       | String      | Advertiser name                        |
+| `advertiser_account_id` | String      | Advertiser account identifier          |
+| `publisher_name`        | String      | Publisher name                         |
+| `publisher_account_id`  | String      | Publisher account identifier           |
+| `consumed_budget`       | String      | Amount of budget consumed              |
+| `daily_budget`          | String      | Daily budget amount                    |
+| `campaign_status`       | Number      | Campaign status code                   |
+| `advertiser_tags`       | Array       | Tags associated with advertiser        |
+| `pending`               | Array       | Pending operations array               |
+| `metrics`               | Object      | Performance metrics object             |
+
+### Settings Object Fields
+
+| Field          | Type   | Description              |
+| -------------- | ------ | ------------------------ |
+| `daily_budget` | Number | Daily budget amount      |
+| `cpc`          | Number | Cost per click value     |
+| `cpm`          | Number | Cost per mille           |
+| `budget_type`  | String | Budget distribution type |
+
+```
+Important: This object is dynamic, depending on the type of campaign it may contain additional or different fields.
+```
+
+### Metrics Object Fields
+
+| Field             | Type   | Description                    |
+| ----------------- | ------ | ------------------------------ |
+| `clicks`          | Number | Total number of clicks         |
+| `conversions`     | Number | Total number of conversions    |
+| `impressions`     | Number | Total number of impressions    |
+| `views`           | Number | Total number of views          |
+| `conversion_rate` | String | Conversion rate percentage     |
+| `ctr`             | String | Click-through rate percentage  |
+| `roas`            | String | Return on ad spend             |
+| `adcost`          | String | Ad cost percentage             |
+| `income`          | String | Total income generated         |
+| `total_spent`     | String | Total amount spent             |
+| `ecpm`            | String | Effective cost per mille (CPM) |
+| `cpa`             | String | Cost per acquisition           |
+| `avg_cpc`         | String | Average cost per click         |
+| `avg_cpm`         | String | Average cost per mille         |

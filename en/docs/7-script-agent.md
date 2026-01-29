@@ -23,7 +23,7 @@ The VTEX Ads script was developed to exclusively collect non-sensitive browsing 
 
 The script should be loaded asynchronously so as not to impact the page load time.
 
--   **Script URL:** `https://cdn.newtail.com.br/retail-media/scripts/vtexads-agent.1.0.0.js`
+-   **Script URL:** `https://cdn.newtail.com.br/retail-media/scripts/vtexrma-agent.1.0.0.js`
 
 ## 7.4. Step-by-Step Guide for Implementation via Google Tag Manager (GTM)
 
@@ -37,7 +37,7 @@ To ensure the script runs as early as possible during page load, we recommend us
 4.  Click on **"Tag Configuration"** and select the **"Custom HTML"** tag type.
 5.  In the HTML field, insert the following code:
     ```html
-    <script type="text/javascript" async src="https://cdn.newtail.com.br/retail-media/scripts/vtexads-agent.1.0.0.js"></script>
+    <script type="text/javascript" async src="https://cdn.newtail.com.br/retail-media/scripts/vtexrma-agent.1.0.0.js"></script>
     ```
 
 ### Step 7.4.2: Configure the Main Trigger
