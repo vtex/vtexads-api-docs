@@ -8,3 +8,12 @@ Through this REST API, your platform will be able to:
 * Synchronize the product catalog and inventory.
 * Request relevant ads in real-time for the user's Browse context.
 * Send interaction events (impression, view, click, conversion) for performance measurement.
+
+We adopt the **Progressive Extensibility** principle to ensure maximum stability and security for our partners' operations.
+
+Our formal compatibility policy guarantees:
+* **Non-breaking evolution:** all API updates are incremental. New fields, capabilities, and options are added without changing or removing the behavior of existing contracts.
+* **Integration preservation:** current integrations remain fully operational after new releases, minimizing recurring technical rework.
+* **Business continuity:** by preserving the integrity of previous contracts, we prevent operational disruptions and allow new capabilities to be adopted at your own pace.
+
+This approach reflects our commitment to a robust, scalable platform where technological innovation and operational predictability evolve together.

@@ -8,3 +8,12 @@ A través de esta API REST, su plataforma podrá:
 * Sincronizar el catálogo de productos e inventario.
 * Solicitar anuncios relevantes en tiempo real para el contexto de navegación del usuario.
 * Enviar eventos de interacción (impresión, visualización, clic, conversión) para la medición de performance.
+
+Adoptamos el principio de **Extensibilidad Progresiva** para garantizar la máxima estabilidad y seguridad en las operaciones de nuestros socios.
+
+Nuestra política formal de compatibilidad garantiza:
+* **Evolución sin rupturas:** todas las actualizaciones de API se realizan de forma incremental. Se agregan nuevos campos, funcionalidades y opciones sin alterar ni eliminar el comportamiento de los contratos existentes.
+* **Preservación de integraciones:** las integraciones actuales permanecen plenamente operativas tras nuevos lanzamientos, reduciendo el retrabajo técnico recurrente.
+* **Continuidad del negocio:** al preservar la integridad de los contratos anteriores, evitamos interrupciones operativas y permitimos adoptar nuevas capacidades al ritmo de su negocio.
+
+Este enfoque refleja nuestro compromiso con una plataforma robusta y escalable, donde la innovación tecnológica y la previsibilidad operativa evolucionan juntas.
