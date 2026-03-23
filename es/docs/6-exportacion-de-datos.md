@@ -11,6 +11,7 @@ Además de la exportación a través de S3, es posible extraer informes a travé
 *  `GET /report/network/publishers`: Publishers de la red (para cuentas de tipo Red) [[Ejemplo]](../../examples/EXPORT_NETWORK_PUBLISHERS_DATA.md)
 *  `GET /campaign/v2`: Informe listado de campañas [[Ejemplo]](../../examples/EXPORT_NETWORK_PUBLISHERS_DATA.md)
 *  `GET /campaign/:id`: Informe detallado de la campaña [[Ejemplo]](../../examples/EXPORT_CAMPAIGN_DATA.md)
+*  `GET /report/advertisers/campaigns-detailed`: Informe detallado de campañas mixtas para cuentas de anunciante, incluyendo filas por subpublisher en campañas de red [[Ejemplo]](../../examples/EXPORT_ADVERTISER_CAMPAIGNS_DETAILED_DATA.md)
 *  `GET /ad/results/v2`: Informe de anuncios individuales [[Ejemplo]](../../examples/EXPORT_CAMPAIGN_DATA.md)
 
 ### 5.2. Exportación de Datos

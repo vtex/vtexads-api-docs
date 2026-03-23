@@ -11,6 +11,7 @@ Além da exportação via S3, é possível extrair relatórios via API. As rotas
 *  `GET /report/network/publishers`: Publishers da rede (para contas do tipo Rede) [[Exemplo]](../../examples/EXPORT_NETWORK_PUBLISHERS_DATA.md)
 *  `GET /campaign/v2`: Relatório listagem de campanhas [[Exemplo]](../../examples/EXPORT_CAMPAIGNS_LIST_DATA.md)
 *  `GET /campaign/:id`: Relatório detalhado da campanha [[Exemplo]](../../examples/EXPORT_CAMPAIGN_DATA.md)
+*  `GET /report/advertisers/campaigns-detailed`: Relatório detalhado de campanhas mistas para contas de anunciante, incluindo linhas por subpublisher em campanhas de rede [[Exemplo]](../../examples/EXPORT_ADVERTISER_CAMPAIGNS_DETAILED_DATA.md)
 *  `GET /ad/results/v2`: Relatório de anúncios [[Exemplo]](../../examples/EXPORT_ADS_DATA.md)
 
 ### 5.2. Exportação de Dados
