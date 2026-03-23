@@ -6,7 +6,8 @@ This endpoint allows advertiser accounts to export a mixed campaign report, incl
 
 ```bash
 curl --location 'https://api-retail-media.newtail.com.br/report/advertisers/campaigns-detailed?start_date=2026-03-01&end_date=2026-03-22&campaign_name=summer&download=true' \
---header 'Authorization: Bearer XXXX' \
+--header 'x-app-id: XXXX' \
+--header 'x-api-key: YYYY' \
 --header 'Content-Type: application/json'
 ```
 
