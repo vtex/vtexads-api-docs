@@ -1,6 +1,6 @@
 # EXPORT ADVERTISER CAMPAIGNS DETAILED DATA - Reports Export Examples
 
-This endpoint allows advertiser accounts to export a mixed campaign report, including both regular campaigns and network campaign rows split by subpublisher when applicable. Data is returned in JSON format by default, but can be exported as XLSX by including the `download=true` parameter in the query string.
+This endpoint allows advertiser accounts to export a mixed campaign report, including both regular campaigns and subpublisher information for network campaigns. Data is returned in JSON format by default, but can be exported as XLSX by including the `download=true` parameter in the query string.
 
 ## Request
 

@@ -2,19 +2,19 @@
 
 La exportación de datos le permite recibir información detallada sobre eventos y datos agregados de forma sistemática y periódica. La integración se realiza a través de una conexión S3, y los datos se entregan en formatos específicos para cada tipo de exportación.
 
-### 5.1. Reportes
+### 6.1. Reportes
 
 Además de la exportación a través de S3, es posible extraer informes a través de la API. Las rutas devuelven JSON por defecto, pero se pueden exportar como archivos XLSX incluyendo el parámetro `download=true` en la consulta.
 
 *  `GET /report/v2/advertisers`: Información de anunciantes (vista del publisher) [[Ejemplo]](../../examples/EXPORT_ADVERTISER_DATA.md)
 *  `GET /report/v2/publishers`: Información del publisher (vista del anunciante) [[Ejemplo]](../../examples/EXPORT_PUBLISHER_DATA.md)
 *  `GET /report/network/publishers`: Publishers de la red (para cuentas de tipo Red) [[Ejemplo]](../../examples/EXPORT_NETWORK_PUBLISHERS_DATA.md)
-*  `GET /campaign/v2`: Informe listado de campañas [[Ejemplo]](../../examples/EXPORT_NETWORK_PUBLISHERS_DATA.md)
+*  `GET /campaign/v2`: Informe listado de campañas [[Ejemplo]](../../examples/EXPORT_CAMPAIGNS_LIST_DATA.md)
 *  `GET /campaign/:id`: Informe detallado de la campaña [[Ejemplo]](../../examples/EXPORT_CAMPAIGN_DATA.md)
-*  `GET /report/advertisers/campaigns-detailed`: Informe detallado de campañas mixtas para cuentas de anunciante, incluyendo filas por subpublisher en campañas de red [[Ejemplo]](../../examples/EXPORT_ADVERTISER_CAMPAIGNS_DETAILED_DATA.md)
-*  `GET /ad/results/v2`: Informe de anuncios individuales [[Ejemplo]](../../examples/EXPORT_CAMPAIGN_DATA.md)
+*  `GET /report/advertisers/campaigns-detailed`: Informe detallado de campañas mixtas para cuentas de anunciante, incluyendo información de subpublisher en campañas de red [[Ejemplo]](../../examples/EXPORT_ADVERTISER_CAMPAIGNS_DETAILED_DATA.md)
+*  `GET /ad/results/v2`: Informe de anuncios individuales [[Ejemplo]](../../examples/EXPORT_ADS_DATA.md)
 
-### 5.2. Exportación de Datos
+### 6.2. Exportación de Datos
 
 La integración siempre se realizará mediante una conexión S3 (o compatible) que deberá ser proporcionada por el receptor de los datos. Las credenciales deben ser entregadas al equipo de Newtail de forma segura.
 
