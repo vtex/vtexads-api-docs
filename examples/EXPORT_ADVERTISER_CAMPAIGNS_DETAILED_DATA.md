@@ -5,7 +5,7 @@ This endpoint allows advertiser accounts to export a mixed campaign report, incl
 ## Request
 
 ```bash
-curl --location 'https://api-retail-media.newtail.com.br/report/advertisers/campaigns-detailed?start_date=2026-03-01&end_date=2026-03-22&campaign_name=summer&download=true' \
+curl --location 'https://api-retail-media.newtail.com.br/report/advertisers/campaigns-detailed?start_date=2026-03-01&end_date=2026-03-22&download=true' \
 --header 'x-app-id: XXXX' \
 --header 'x-api-key: YYYY' \
 --header 'Content-Type: application/json'
@@ -18,7 +18,6 @@ curl --location 'https://api-retail-media.newtail.com.br/report/advertisers/camp
 | `start_date` | Yes | Start date for metrics in `YYYY-MM-DD` format. |
 | `end_date` | Yes | End date for metrics in `YYYY-MM-DD` format. |
 | `campaign_id` | No | Filters by campaign ID. |
-| `campaign_name` | No | Filters campaigns by name. |
 | `campaign_status` | No | Filters by campaign status. |
 | `publisher_id` | No | Filters by publisher ID. |
 | `publisher_name` | No | Filters by publisher name. |
