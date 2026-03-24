@@ -2,7 +2,7 @@
 
 A exportação de dados permite que você receba informações detalhadas sobre eventos e dados agregados de forma sistemática e periódica. A integração ocorre através de uma conexão S3, e os dados são entregues em formatos específicos para cada tipo de exportação.
 
-### 5.1. Relatórios
+### 6.1. Relatórios
 
 Além da exportação via S3, é possível extrair relatórios via API. As rotas retornam JSON por padrão, mas podem ser exportadas como arquivos XLSX ao incluir o parâmetro `download=true` na query.
 
@@ -11,9 +11,10 @@ Além da exportação via S3, é possível extrair relatórios via API. As rotas
 *  `GET /report/network/publishers`: Publishers da rede (para contas do tipo Rede) [[Exemplo]](../../examples/EXPORT_NETWORK_PUBLISHERS_DATA.md)
 *  `GET /campaign/v2`: Relatório listagem de campanhas [[Exemplo]](../../examples/EXPORT_CAMPAIGNS_LIST_DATA.md)
 *  `GET /campaign/:id`: Relatório detalhado da campanha [[Exemplo]](../../examples/EXPORT_CAMPAIGN_DATA.md)
+*  `GET /report/advertisers/campaigns-detailed`: Relatório detalhado de campanhas mistas para contas de anunciante, incluindo informações de subpublisher em campanhas de rede [[Exemplo]](../../examples/EXPORT_ADVERTISER_CAMPAIGNS_DETAILED_DATA.md)
 *  `GET /ad/results/v2`: Relatório de anúncios [[Exemplo]](../../examples/EXPORT_ADS_DATA.md)
 
-### 5.2. Exportação de Dados
+### 6.2. Exportação de Dados
 
 A integração sempre ocorrerá usando uma conexão S3 (ou compatível) que deverá ser disponibilizada pelo receptor dos dados. As credenciais devem ser passadas para o time da Newtail de forma segura.
 
