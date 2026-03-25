@@ -1,6 +1,6 @@
 # EXPORT ADVERTISER ADS DETAILED DATA - Reports Export Examples
 
-This endpoint allows advertiser accounts to export a detailed ad report. It follows the ad-level view of `/ad/results/v2`, and for network campaigns it adds a subpublisher breakdown. Data is returned in JSON format by default, but can be exported as XLSX by including the `download=true` parameter in the query string.
+This endpoint allows advertiser accounts to export a detailed ad report. Adds a subpublisher breakdown for network campaigns. Data is returned in JSON format by default, but can be exported as XLSX by including the `download=true` parameter in the query string.
 
 ## Request
 
