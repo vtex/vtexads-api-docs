@@ -100,7 +100,7 @@ Important: Paused ads are excluded from the default response. To include paused 
         "impressions": "2900",
         "views": "2689",
         "conversion_rate": "1.89",
-        "conversion_rate_view": "0.70",
+        "conversion_rate_view": "0.04",
         "ctr": "1.83",
         "roas": "0.18",
         "adcost": "540.94",
