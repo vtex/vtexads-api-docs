@@ -72,7 +72,7 @@ curl --location 'https://api-retail-media.newtail.com.br/report/advertisers/camp
         "impressions": 7603,
         "views": 51,
         "conversion_rate": "10.26",
-        "conversion_rate_view": "3.92",
+        "conversion_rate_view": "7.84",
         "ctr": ".51",
         "roas": "2.64",
         "adcost": "37.87",
