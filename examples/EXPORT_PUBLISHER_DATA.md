@@ -51,7 +51,7 @@ curl --location 'https://api-retail-media.newtail.com.br/report/v2/publishers?st
           "clicks": "4954",
           "conversions": "214",
           "conversion_rate": "4.32",
-          "conversion_rate_view": "1.87",
+          "conversion_rate_view": "0.00",
           "total_conversions_items_quantity": "214",
           "ctr": "0.09",
           "income": "581620.1500",
