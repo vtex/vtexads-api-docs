@@ -31,7 +31,7 @@ curl --location 'https://api-retail-media.newtail.com.br/report/advertisers/camp
 | `page` | No | Page number of the results. Default: `1`. |
 | `quantity` | No | Number of items per page. Default: `100`. When `download=true`, the BFF requests up to `20000` rows for XLSX generation. |
 | `count` | No | If `true`, returns pagination metadata. Default: `true`. |
-| `order_by` | No | Field for sorting results. Possible values include `advertiser_name`, `name`, `ad_type`, `status`, `sub_publisher_name`, `daily_budget`, `impressions`, `views`, `clicks`, `ctr`, `total_spent`, `conversions`, `conversion_rate`, `income`, `roas`, `created_at`, `start_at`. |
+| `order_by` | No | Field for sorting results. Possible values include `advertiser_name`, `name`, `ad_type`, `status`, `sub_publisher_name`, `daily_budget`, `impressions`, `views`, `clicks`, `ctr`, `total_spent`, `conversions`, `conversion_rate`, `conversion_rate_view`, `income`, `roas`, `created_at`, `start_at`. |
 | `order_direction` | No | Sort direction. Possible values: `asc` or `desc`. |
 | `download` | No | If `true`, returns an XLSX file instead of JSON. |
 
@@ -72,6 +72,7 @@ curl --location 'https://api-retail-media.newtail.com.br/report/advertisers/camp
         "impressions": 7603,
         "views": 51,
         "conversion_rate": "10.26",
+        "conversion_rate_view": "3.92",
         "ctr": ".51",
         "roas": "2.64",
         "adcost": "37.87",

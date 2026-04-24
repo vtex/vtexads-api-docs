@@ -50,6 +50,7 @@ curl --location 'https://api-retail-media.newtail.com.br/report/v2/advertisers?s
         "clicks": "1237",
         "conversions": "0",
         "conversion_rate": "0.00",
+        "conversion_rate_view": "0.00",
         "total_conversions_items_quantity": "0",
         "ctr": "0.31",
         "income": "0.0000",
@@ -61,7 +62,14 @@ curl --location 'https://api-retail-media.newtail.com.br/report/v2/advertisers?s
         "conversions_quantity": "0",
         "roas": "0.00",
         "adcost": "0.0",
-        "consumed_daily_budget": "4407.70"
+        "consumed_daily_budget": "4407.70",
+        "click_roas": "0.00",
+        "view_roas": "0.00",
+        "assisted_income": null,
+        "assisted_roas": null,
+        "assisted_orders": null,
+        "assisted_items": null,
+        "overall_roas": "0.00"
       },
       "account_logo": "https://cdn.newtail.com.br/accounts/4852asd4q-3b0a-11ef-b7a2-014ea2680b7e/assets/advertiser-logo.png",
       "account_theme": {
@@ -110,7 +118,8 @@ curl --location 'https://api-retail-media.newtail.com.br/report/v2/advertisers?s
 | `views`                            | String | Total number of ad views          |
 | `clicks`                           | String | Total number of ad clicks         |
 | `conversions`                      | String | Total number of conversions       |
-| `conversion_rate`                  | String | Conversion rate percentage        |
+| `conversion_rate`                  | String | Conversion rate percentage (clicks-based) |
+| `conversion_rate_view`             | String | Conversion rate percentage (views-based)  |
 | `total_conversions_items_quantity` | String | Total quantity of converted items |
 | `ctr`                              | String | Click-through rate percentage     |
 | `income`                           | String | Total income generated            |
@@ -123,6 +132,13 @@ curl --location 'https://api-retail-media.newtail.com.br/report/v2/advertisers?s
 | `roas`                             | String | Return on ad spend                |
 | `adcost`                           | String | Ad cost                           |
 | `consumed_daily_budget`            | String | Amount of daily budget consumed   |
+| `click_roas`                       | String | Return on ad spend attributed to clicks |
+| `view_roas`                        | String | Return on ad spend attributed to views |
+| `assisted_income`                  | String/null | Assisted sales revenue (null when no assisted sales data is available) |
+| `assisted_roas`                    | String/null | Return on ad spend from assisted orders (null when no assisted sales data is available) |
+| `assisted_orders`                  | String/null | Number of orders assisted by the ad (null when no assisted sales data is available) |
+| `assisted_items`                   | String/null | Number of items from assisted orders (null when no assisted sales data is available) |
+| `overall_roas`                     | String | Combined return on ad spend from direct and assisted sales |
 
 ### Account Theme Object Fields
 

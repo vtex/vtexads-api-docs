@@ -68,6 +68,7 @@ curl --location 'https://api-retail-media.newtail.com.br/campaign/{CAMPAIGN_ID}?
     "impressions": 7603,
     "views": 51,
     "conversion_rate": "10.26",
+    "conversion_rate_view": "3.92",
     "ctr": ".51",
     "roas": "2.64",
     "adcost": "37.87",
@@ -76,7 +77,14 @@ curl --location 'https://api-retail-media.newtail.com.br/campaign/{CAMPAIGN_ID}?
     "ecpm": "3.3864",
     "cpa": "2437.50",
     "avg_cpc": "250.00",
-    "avg_cpm": "1282.39"
+    "avg_cpm": "1282.39",
+    "click_roas": "2.31",
+    "view_roas": "0.33",
+    "assisted_income": "3200.00",
+    "assisted_roas": "0.33",
+    "assisted_orders": "2",
+    "assisted_items": "4",
+    "overall_roas": "2.97"
   },
   "ads": [
     {
@@ -111,6 +119,7 @@ curl --location 'https://api-retail-media.newtail.com.br/campaign/{CAMPAIGN_ID}?
         "impressions": 7603,
         "views": 51,
         "conversion_rate": "10.26",
+        "conversion_rate_view": "3.92",
         "ctr": ".51",
         "roas": "2.64",
         "adcost": "37.87",
@@ -200,7 +209,8 @@ Important: This object is dynamic, depending on the type of campaign it may cont
 | `conversions`     | Number | Total number of conversions    |
 | `impressions`     | Number | Total number of impressions    |
 | `views`           | Number | Total number of views          |
-| `conversion_rate` | String | Conversion rate percentage     |
+| `conversion_rate`      | String | Conversion rate percentage (clicks-based) |
+| `conversion_rate_view` | String | Conversion rate percentage (views-based)  |
 | `ctr`             | String | Click-through rate percentage  |
 | `roas`            | String | Return on ad spend             |
 | `adcost`          | String | Ad cost percentage             |
@@ -210,6 +220,13 @@ Important: This object is dynamic, depending on the type of campaign it may cont
 | `cpa`             | String | Cost per acquisition           |
 | `avg_cpc`         | String | Average cost per click         |
 | `avg_cpm`         | String | Average cost per mille         |
+| `click_roas`      | String | Return on ad spend attributed to clicks |
+| `view_roas`       | String | Return on ad spend attributed to views |
+| `assisted_income` | String/null | Assisted sales revenue (null when no assisted sales data is available) |
+| `assisted_roas`   | String/null | Return on ad spend from assisted orders (null when no assisted sales data is available) |
+| `assisted_orders` | String/null | Number of orders assisted by the ad (null when no assisted sales data is available) |
+| `assisted_items`  | String/null | Number of items from assisted orders (null when no assisted sales data is available) |
+| `overall_roas`    | String | Combined return on ad spend from direct and assisted sales |
 
 ### Ad Object Fields
 
@@ -266,7 +283,8 @@ Important: This object is dynamic, depending on the type of campaign it may cont
 | `conversions`     | Number | Total number of conversions    |
 | `impressions`     | Number | Total number of impressions    |
 | `views`           | Number | Total number of views          |
-| `conversion_rate` | String | Conversion rate percentage     |
+| `conversion_rate`      | String | Conversion rate percentage (clicks-based) |
+| `conversion_rate_view` | String | Conversion rate percentage (views-based)  |
 | `ctr`             | String | Click-through rate percentage  |
 | `roas`            | String | Return on ad spend             |
 | `adcost`          | String | Ad cost percentage             |

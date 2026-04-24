@@ -24,7 +24,7 @@ curl --location 'https://api-retail-media.newtail.com.br/report/v2/publishers?st
 | `page`            | No          | Page number of results. Default: `1`.                                       |
 | `quantity`        | No          | Number of items per page. Default: `100`. |
 | `count`           | No          | If `true`, returns the total number of records available. Default: `false`. |
-| `order_by`        | No          | Field for sorting results. Possible values: `name`, `balance`, `total_daily_budget`, `total_campaigns`, `impressions`, `clicks`, `ctr`, `total_spent`, `conversions`, `conversion_rate`, `income`, `roas`. |
+| `order_by`        | No          | Field for sorting results. Possible values: `name`, `balance`, `total_daily_budget`, `total_campaigns`, `impressions`, `clicks`, `ctr`, `total_spent`, `conversions`, `conversion_rate`, `conversion_rate_view`, `income`, `roas`. |
 | `order_direction` | No          | Sort direction. Possible values: `asc` (ascending) or `desc` (descending).  |
 | `download`        | No          | If `true`, returns an XLSX file buffer for download instead of JSON.        |
 
@@ -51,6 +51,7 @@ curl --location 'https://api-retail-media.newtail.com.br/report/v2/publishers?st
           "clicks": "4954",
           "conversions": "214",
           "conversion_rate": "4.32",
+          "conversion_rate_view": "1.87",
           "total_conversions_items_quantity": "214",
           "ctr": "0.09",
           "income": "581620.1500",
@@ -61,7 +62,14 @@ curl --location 'https://api-retail-media.newtail.com.br/report/v2/publishers?st
           "avg_cpm": "0.25",
           "conversions_quantity": "214",
           "roas": "433.92",
-          "adcost": "0.23"
+          "adcost": "0.23",
+          "click_roas": "412.65",
+          "view_roas": "21.27",
+          "assisted_income": "45200.00",
+          "assisted_roas": "33.73",
+          "assisted_orders": "18",
+          "assisted_items": "24",
+          "overall_roas": "467.65"
       },
       "account_logo": "https://cdn.newtail.com.br/accounts/4852asd4q-3b0a-11ef-b7a2-014ea2680b7e/assets/publisher-logo.png",
       "account_theme": {
@@ -108,7 +116,8 @@ curl --location 'https://api-retail-media.newtail.com.br/report/v2/publishers?st
 | `views`                            | String | Total number of ad views          |
 | `clicks`                           | String | Total number of ad clicks         |
 | `conversions`                      | String | Total number of conversions       |
-| `conversion_rate`                  | String | Conversion rate percentage        |
+| `conversion_rate`                  | String | Conversion rate percentage (clicks-based) |
+| `conversion_rate_view`             | String | Conversion rate percentage (views-based)  |
 | `total_conversions_items_quantity` | String | Total quantity of converted items |
 | `ctr`                              | String | Click-through rate percentage     |
 | `income`                           | String | Total income generated            |
@@ -120,6 +129,13 @@ curl --location 'https://api-retail-media.newtail.com.br/report/v2/publishers?st
 | `conversions_quantity`             | String | Total quantity of converted items |
 | `roas`                             | String | Return on ad spend                |
 | `adcost`                           | String | Ad cost                           |
+| `click_roas`                       | String | Return on ad spend attributed to clicks |
+| `view_roas`                        | String | Return on ad spend attributed to views |
+| `assisted_income`                  | String/null | Assisted sales revenue (null when no assisted sales data is available) |
+| `assisted_roas`                    | String/null | Return on ad spend from assisted orders (null when no assisted sales data is available) |
+| `assisted_orders`                  | String/null | Number of orders assisted by the ad (null when no assisted sales data is available) |
+| `assisted_items`                   | String/null | Number of items from assisted orders (null when no assisted sales data is available) |
+| `overall_roas`                     | String | Combined return on ad spend from direct and assisted sales |
 
 ### Account Theme Object Fields
 
