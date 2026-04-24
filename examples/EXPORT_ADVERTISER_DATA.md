@@ -134,10 +134,10 @@ curl --location 'https://api-retail-media.newtail.com.br/report/v2/advertisers?s
 | `consumed_daily_budget`            | String | Amount of daily budget consumed   |
 | `click_roas`                       | String | Return on ad spend attributed to clicks |
 | `view_roas`                        | String | Return on ad spend attributed to views |
-| `assisted_income`                  | String/null | Assisted sales revenue (null when no assisted sales data is available) |
-| `assisted_roas`                    | String/null | Return on ad spend from assisted orders (null when no assisted sales data is available) |
-| `assisted_orders`                  | String/null | Number of orders assisted by the ad (null when no assisted sales data is available) |
-| `assisted_items`                   | String/null | Number of items from assisted orders (null when no assisted sales data is available) |
+| `assisted_income`                  | String/Null | Assisted sales revenue (null when no assisted sales data is available) |
+| `assisted_roas`                    | String/Null | Return on ad spend from assisted orders (null when no assisted sales data is available) |
+| `assisted_orders`                  | String/Null | Number of orders assisted by the ad (null when no assisted sales data is available) |
+| `assisted_items`                   | String/Null | Number of items from assisted orders (null when no assisted sales data is available) |
 | `overall_roas`                     | String | Combined return on ad spend from direct and assisted sales |
 
 ### Account Theme Object Fields
