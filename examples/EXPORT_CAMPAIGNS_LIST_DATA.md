@@ -90,8 +90,6 @@ curl --location 'https://api-retail-media.newtail.com.br/campaign/v2?start_date=
         "cpa": "2437.50",
         "avg_cpc": "250.00",
         "avg_cpm": "1282.39",
-        "click_roas": "2.31",
-        "view_roas": "0.33",
         "assisted_income": "3200.00",
         "assisted_roas": "0.33",
         "assisted_orders": "2",
@@ -183,8 +181,6 @@ Important: This object is dynamic, depending on the type of campaign it may cont
 | `cpa`             | String | Cost per acquisition           |
 | `avg_cpc`         | String | Average cost per click         |
 | `avg_cpm`         | String | Average cost per mille         |
-| `click_roas`      | String | Return on ad spend attributed to clicks |
-| `view_roas`       | String | Return on ad spend attributed to views |
 | `assisted_income` | String/Null | Assisted sales revenue (null when no assisted sales data is available) |
 | `assisted_roas`   | String/Null | Return on ad spend from assisted orders (null when no assisted sales data is available) |
 | `assisted_orders` | String/Null | Number of orders assisted by the ad (null when no assisted sales data is available) |

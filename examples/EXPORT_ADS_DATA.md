@@ -110,8 +110,6 @@ Important: Paused ads are excluded from the default response. To include paused 
         "cpa": "29000.00",
         "avg_cpc": "547.17",
         "avg_cpm": "10000.00",
-        "click_roas": "0.18",
-        "view_roas": "0.14",
         "assisted_income": "1200.00",
         "assisted_roas": "0.04",
         "assisted_orders": "1",
@@ -216,8 +214,6 @@ Important: This object is dynamic, depending on the type of campaign it may cont
 | `cpa`                              | String | Cost per acquisition              |
 | `avg_cpc`                          | String | Average cost per click            |
 | `avg_cpm`                          | String | Average cost per mille            |
-| `click_roas`                       | String | Return on ad spend attributed to clicks |
-| `view_roas`                        | String | Return on ad spend attributed to views |
 | `assisted_income`                  | String/Null | Assisted sales revenue (null when no assisted sales data is available) |
 | `assisted_roas`                    | String/Null | Return on ad spend from assisted orders (null when no assisted sales data is available) |
 | `assisted_orders`                  | String/Null | Number of orders assisted by the ad (null when no assisted sales data is available) |

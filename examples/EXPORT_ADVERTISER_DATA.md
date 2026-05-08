@@ -63,8 +63,6 @@ curl --location 'https://api-retail-media.newtail.com.br/report/v2/advertisers?s
         "roas": "0.00",
         "adcost": "0.0",
         "consumed_daily_budget": "4407.70",
-        "click_roas": "0.00",
-        "view_roas": "0.00",
         "assisted_income": null,
         "assisted_roas": null,
         "assisted_orders": null,
@@ -132,8 +130,6 @@ curl --location 'https://api-retail-media.newtail.com.br/report/v2/advertisers?s
 | `roas`                             | String | Return on ad spend                |
 | `adcost`                           | String | Ad cost                           |
 | `consumed_daily_budget`            | String | Amount of daily budget consumed   |
-| `click_roas`                       | String | Return on ad spend attributed to clicks |
-| `view_roas`                        | String | Return on ad spend attributed to views |
 | `assisted_income`                  | String/Null | Assisted sales revenue (null when no assisted sales data is available) |
 | `assisted_roas`                    | String/Null | Return on ad spend from assisted orders (null when no assisted sales data is available) |
 | `assisted_orders`                  | String/Null | Number of orders assisted by the ad (null when no assisted sales data is available) |

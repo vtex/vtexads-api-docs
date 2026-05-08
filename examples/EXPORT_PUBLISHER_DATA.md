@@ -63,8 +63,6 @@ curl --location 'https://api-retail-media.newtail.com.br/report/v2/publishers?st
           "conversions_quantity": "214",
           "roas": "433.92",
           "adcost": "0.23",
-          "click_roas": "412.65",
-          "view_roas": "21.27",
           "assisted_income": "45200.00",
           "assisted_roas": "33.73",
           "assisted_orders": "18",
@@ -129,8 +127,6 @@ curl --location 'https://api-retail-media.newtail.com.br/report/v2/publishers?st
 | `conversions_quantity`             | String | Total quantity of converted items |
 | `roas`                             | String | Return on ad spend                |
 | `adcost`                           | String | Ad cost                           |
-| `click_roas`                       | String | Return on ad spend attributed to clicks |
-| `view_roas`                        | String | Return on ad spend attributed to views |
 | `assisted_income`                  | String/Null | Assisted sales revenue (null when no assisted sales data is available) |
 | `assisted_roas`                    | String/Null | Return on ad spend from assisted orders (null when no assisted sales data is available) |
 | `assisted_orders`                  | String/Null | Number of orders assisted by the ad (null when no assisted sales data is available) |
