@@ -1,19 +1,8 @@
 ## 1. Summary
 
-This document details the integration with the **Retail Media API**, the central connection point between the VTEX Ads solution and the retailer's (publisher's) platform. The solution was developed under an **API-first** concept, ensuring total flexibility for retailers to integrate and display ads on any digital channel: e-commerce, marketplace, app, or even on physical totems and screens (Digital Signage).
-
-Our architecture is **cookie-less**, meaning we do not rely on third-party cookies. Identification and targeting are based on proprietary identifiers (`user_id`, `session_id`) and first-party data, ensuring a robust solution that complies with new privacy policies and is prepared for the future of digital retail.
-
-Through this REST API, your platform will be able to:
-* Synchronize the product catalog and inventory.
-* Request relevant ads in real-time for the user's Browse context.
-* Send interaction events (impression, view, click, conversion) for performance measurement.
-
-We adopt the **Progressive Extensibility** principle to ensure maximum stability and security for our partners' operations.
-
-Our formal compatibility policy guarantees:
-* **Non-breaking evolution:** all API updates are incremental. New fields, capabilities, and options are added without changing or removing the behavior of existing contracts.
-* **Integration preservation:** current integrations remain fully operational after new releases, minimizing recurring technical rework.
-* **Business continuity:** by preserving the integrity of previous contracts, we prevent operational disruptions and allow new capabilities to be adopted at your own pace.
-
-This approach reflects our commitment to a robust, scalable platform where technological innovation and operational predictability evolve together.
+> [!IMPORTANT]
+> **This page has moved.**
+>
+> The VTEX Ads API documentation is now part of the official VTEX Developers Portal: [VTEX Ads API on developers.vtex.com](https://developers.vtex.com/docs/api-reference/vtex-ads-api).
+>
+> Please update your bookmarks. This page is no longer maintained.
