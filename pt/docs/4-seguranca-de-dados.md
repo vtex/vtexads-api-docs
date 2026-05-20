@@ -1,5 +1,12 @@
 # 4. Segurança de Dados
 
+> [!IMPORTANT]
+> **Esta página foi movida.**
+>
+> A documentação da API do VTEX Ads agora faz parte do Portal do Desenvolvedor oficial da VTEX: [VTEX Ads API em developers.vtex.com](https://developers.vtex.com/docs/api-reference/vtex-ads-api).
+>
+> Atualize seus favoritos. Esta página não é mais mantida.
+
 A segurança dos dados é um pilar fundamental da nossa plataforma. Desde o início, nossa arquitetura foi projetada para garantir que nenhuma informação sensível seja coletada e que os dados dos usuários permaneçam sempre protegidos e não identificáveis.
 
 ## Dados Não Identificáveis

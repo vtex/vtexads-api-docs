@@ -1,5 +1,12 @@
 # Attribution Window and Conversion Models
 
+> [!IMPORTANT]
+> **This page has moved.**
+>
+> The VTEX Ads API documentation is now part of the official VTEX Developers Portal: [VTEX Ads API on developers.vtex.com](https://developers.vtex.com/docs/api-reference/vtex-ads-api).
+>
+> Please update your bookmarks. This page is no longer maintained.
+
 This document details the rules, models, and timelines that govern the attribution of conversions (sales) and the billing of advertising campaigns on our platform.
 
 ## 1. What is the Attribution Window?

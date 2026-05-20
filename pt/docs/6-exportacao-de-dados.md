@@ -1,5 +1,12 @@
 ## 6. Exportação de Dados
 
+> [!IMPORTANT]
+> **Esta página foi movida.**
+>
+> A documentação da API do VTEX Ads agora faz parte do Portal do Desenvolvedor oficial da VTEX: [VTEX Ads API em developers.vtex.com](https://developers.vtex.com/docs/api-reference/vtex-ads-api).
+>
+> Atualize seus favoritos. Esta página não é mais mantida.
+
 A exportação de dados permite que você receba informações detalhadas sobre eventos e dados agregados de forma sistemática e periódica. A integração ocorre através de uma conexão S3, e os dados são entregues em formatos específicos para cada tipo de exportação.
 
 ### 6.1. Relatórios

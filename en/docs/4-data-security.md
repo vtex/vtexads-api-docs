@@ -1,5 +1,12 @@
 # 4. Data Security
 
+> [!IMPORTANT]
+> **This page has moved.**
+>
+> The VTEX Ads API documentation is now part of the official VTEX Developers Portal: [VTEX Ads API on developers.vtex.com](https://developers.vtex.com/docs/api-reference/vtex-ads-api).
+>
+> Please update your bookmarks. This page is no longer maintained.
+
 Data security is a fundamental pillar of our platform. From the outset, our architecture was designed to ensure that no sensitive information is collected and that user data remains protected and non-identifiable at all times.
 
 ## Non-Identifiable Data

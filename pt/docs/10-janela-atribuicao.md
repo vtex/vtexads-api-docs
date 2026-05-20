@@ -1,5 +1,12 @@
 # Janela de Atribuição e Modelos de Conversão
 
+> [!IMPORTANT]
+> **Esta página foi movida.**
+>
+> A documentação da API do VTEX Ads agora faz parte do Portal do Desenvolvedor oficial da VTEX: [VTEX Ads API em developers.vtex.com](https://developers.vtex.com/docs/api-reference/vtex-ads-api).
+>
+> Atualize seus favoritos. Esta página não é mais mantida.
+
 Este documento detalha as regras, modelos e prazos que regem a atribuição de conversões (vendas) e a cobrança das campanhas de publicidade em nossa plataforma.
 
 ## 1. O que é a Janela de Atribuição?

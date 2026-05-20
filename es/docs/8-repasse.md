@@ -1,5 +1,12 @@
 ## 7. Transferencia de Créditos
 
+> [!IMPORTANT]
+> **Esta página se ha movido.**
+>
+> La documentación de la API de VTEX Ads ahora forma parte del Portal de Desarrolladores oficial de VTEX: [VTEX Ads API en developers.vtex.com](https://developers.vtex.com/docs/api-reference/vtex-ads-api).
+>
+> Actualiza tus marcadores. Esta página ya no recibe mantenimiento.
+
 La transferencia de créditos es el flujo que permite al marketplace transferir créditos de publicidad a sus sellers. Esta documentación detalla los endpoints que el marketplace debe implementar y el webhook que debe consumir para realizar la integración con VTEXAds.
 
 <div align="center">

@@ -1,5 +1,12 @@
 ## 7. Repasse de Créditos
 
+> [!IMPORTANT]
+> **Esta página foi movida.**
+>
+> A documentação da API do VTEX Ads agora faz parte do Portal do Desenvolvedor oficial da VTEX: [VTEX Ads API em developers.vtex.com](https://developers.vtex.com/docs/api-reference/vtex-ads-api).
+>
+> Atualize seus favoritos. Esta página não é mais mantida.
+
 O repasse de créditos é o fluxo que permite ao marketplace transferir créditos de anúncio para seus sellers. Esta documentação detalha os endpoints que o marketplace deve implementar e o webhook que deve consumir para realizar a integração com a VTEXAds.
 
 <div align="center">

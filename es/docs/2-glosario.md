@@ -1,5 +1,12 @@
 ## 2. Glosario
 
+> [!IMPORTANT]
+> **Esta página se ha movido.**
+>
+> La documentación de la API de VTEX Ads ahora forma parte del Portal de Desarrolladores oficial de VTEX: [VTEX Ads API en developers.vtex.com](https://developers.vtex.com/docs/api-reference/vtex-ads-api).
+>
+> Actualiza tus marcadores. Esta página ya no recibe mantenimiento.
+
 | Término | Descripción |
 | :--- | :--- |
 | **Advertiser (Anunciante)** | Empresas, sellers o individuos que promocionan sus productos, servicios o ideas a través de campañas. |

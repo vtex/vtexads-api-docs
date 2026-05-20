@@ -1,5 +1,12 @@
 # 7. VTEX Ads - Script Agent
 
+> [!IMPORTANT]
+> **Esta página se ha movido.**
+>
+> La documentación de la API de VTEX Ads ahora forma parte del Portal de Desarrolladores oficial de VTEX: [VTEX Ads API en developers.vtex.com](https://developers.vtex.com/docs/api-reference/vtex-ads-api).
+>
+> Actualiza tus marcadores. Esta página ya no recibe mantenimiento.
+
 ## 7.1. Objetivo
 
 Este documento detalla el procedimiento para la instalación del script de seguimiento de **VTEX Ads** en todas las páginas de un sitio web (excepto las páginas de checkout) a través de Google Tag Manager (GTM). La correcta implementación de este script es fundamental para la recopilación de datos de navegación que permiten la optimización y el direccionamiento de campañas de Retail Media.

@@ -1,5 +1,12 @@
 ## 8. Credit Transfer
 
+> [!IMPORTANT]
+> **This page has moved.**
+>
+> The VTEX Ads API documentation is now part of the official VTEX Developers Portal: [VTEX Ads API on developers.vtex.com](https://developers.vtex.com/docs/api-reference/vtex-ads-api).
+>
+> Please update your bookmarks. This page is no longer maintained.
+
 Credit transfer is the flow that allows the marketplace to transfer advertising credits to its sellers. This documentation details the endpoints that the marketplace must implement and the webhook it must consume to integrate with VTEXAds.
 
 <div align="center">

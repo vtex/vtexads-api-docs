@@ -1,5 +1,12 @@
 # 5. Integración de Anuncios
 
+> [!IMPORTANT]
+> **Esta página se ha movido.**
+>
+> La documentación de la API de VTEX Ads ahora forma parte del Portal de Desarrolladores oficial de VTEX: [VTEX Ads API en developers.vtex.com](https://developers.vtex.com/docs/api-reference/vtex-ads-api).
+>
+> Actualiza tus marcadores. Esta página ya no recibe mantenimiento.
+
 Esta sección proporciona información detallada sobre cómo integrarse con la plataforma de VTEX Ads para mostrar anuncios en su sitio web.
 
 ## 5.0 Visión General del Flujo de Integración

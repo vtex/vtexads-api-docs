@@ -1,5 +1,12 @@
 ## 1. Resumen
 
+> [!IMPORTANT]
+> **Esta página se ha movido.**
+>
+> La documentación de la API de VTEX Ads ahora forma parte del Portal de Desarrolladores oficial de VTEX: [VTEX Ads API en developers.vtex.com](https://developers.vtex.com/docs/api-reference/vtex-ads-api).
+>
+> Actualiza tus marcadores. Esta página ya no recibe mantenimiento.
+
 Esta documentación detalla la integración con la **Retail Media API**, el punto central de conexión entre la solución de VTEX Ads y la plataforma del minorista (publisher). La solución fue desarrollada bajo el concepto **API-first**, garantizando flexibilidad total para que los minoristas integren y exhiban anuncios en cualquier canal digital: e-commerce, marketplace, aplicación o incluso en tótems y pantallas físicas (Digital Signage).
 
 Nuestra arquitectura es **cookie-less**, lo que significa que no dependemos de cookies de terceros. La identificación y segmentación se basan en identificadores propios (`user_id`, `session_id`) y datos primarios (first-party data), garantizando una solución robusta, en conformidad con las nuevas políticas de privacidad y preparada para el futuro del retail digital.

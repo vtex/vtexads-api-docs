@@ -1,5 +1,12 @@
 # Ventana de Atribución y Modelos de Conversión
 
+> [!IMPORTANT]
+> **Esta página se ha movido.**
+>
+> La documentación de la API de VTEX Ads ahora forma parte del Portal de Desarrolladores oficial de VTEX: [VTEX Ads API en developers.vtex.com](https://developers.vtex.com/docs/api-reference/vtex-ads-api).
+>
+> Actualiza tus marcadores. Esta página ya no recibe mantenimiento.
+
 Este documento detalla las reglas, modelos y plazos que rigen la atribución de conversiones (ventas) y la facturación de las campañas publicitarias en nuestra plataforma.
 
 ## 1. ¿Qué es la Ventana de Atribución?

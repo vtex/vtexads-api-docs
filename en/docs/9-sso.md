@@ -1,5 +1,12 @@
 ## 8. SSO (Single Sign-On)
 
+> [!IMPORTANT]
+> **This page has moved.**
+>
+> The VTEX Ads API documentation is now part of the official VTEX Developers Portal: [VTEX Ads API on developers.vtex.com](https://developers.vtex.com/docs/api-reference/vtex-ads-api).
+>
+> Please update your bookmarks. This page is no longer maintained.
+
 API for unified seller login. When calling this API, Newtail generates a redirect URL that allows the user to access the Newtail platform without needing to log in again.
 
 * **Endpoint:** `POST /sso/marketplace`
