@@ -24,7 +24,7 @@ curl --location 'https://api-retail-media.newtail.com.br/campaign/v2?start_date=
 | `page`            | No       | Page number of the results. Default: `1`.                               |
 | `quantity`        | No       | Number of items per page. Default: `100`.                               |
 | `count`           | No       | If `true`, returns the total number of available records. Default: `false`. |
-| `order_by`        | No       | Field for sorting results. Possible values: `name`, `impressions`, `clicks`, `ctr`, `conversions`, `conversion_rate`, `income`, `roas`, `created_at`, `start_at`, `daily_budget`, `ad_type`, `advertiser_name`, `status`. |
+| `order_by`        | No       | Field for sorting results. Possible values: `name`, `impressions`, `clicks`, `ctr`, `conversions`, `conversion_rate`, `conversion_rate_view`, `income`, `roas`, `created_at`, `start_at`, `daily_budget`, `ad_type`, `advertiser_name`, `status`. |
 | `order_direction` | No       | Sort direction. Possible values: `asc` (ascending) or `desc` (descending). |
 | `download`        | No       | If `true`, returns an XLSX file buffer for download instead of JSON. |
 
@@ -80,6 +80,7 @@ curl --location 'https://api-retail-media.newtail.com.br/campaign/v2?start_date=
         "impressions": 7603,
         "views": 51,
         "conversion_rate": "10.26",
+        "conversion_rate_view": "7.84",
         "ctr": ".51",
         "roas": "2.64",
         "adcost": "37.87",
@@ -88,7 +89,12 @@ curl --location 'https://api-retail-media.newtail.com.br/campaign/v2?start_date=
         "ecpm": "3.3864",
         "cpa": "2437.50",
         "avg_cpc": "250.00",
-        "avg_cpm": "1282.39"
+        "avg_cpm": "1282.39",
+        "assisted_income": "3200.00",
+        "assisted_roas": "0.33",
+        "assisted_orders": "2",
+        "assisted_items": "4",
+        "overall_roas": "2.97"
       }
     }
   ]
@@ -164,7 +170,8 @@ Important: This object is dynamic, depending on the type of campaign it may cont
 | `conversions`     | Number | Total number of conversions    |
 | `impressions`     | Number | Total number of impressions    |
 | `views`           | Number | Total number of views          |
-| `conversion_rate` | String | Conversion rate percentage     |
+| `conversion_rate`      | String | Conversion rate percentage (clicks-based) |
+| `conversion_rate_view` | String | Conversion rate percentage (views-based)  |
 | `ctr`             | String | Click-through rate percentage  |
 | `roas`            | String | Return on ad spend             |
 | `adcost`          | String | Ad cost percentage             |
@@ -174,3 +181,8 @@ Important: This object is dynamic, depending on the type of campaign it may cont
 | `cpa`             | String | Cost per acquisition           |
 | `avg_cpc`         | String | Average cost per click         |
 | `avg_cpm`         | String | Average cost per mille         |
+| `assisted_income` | String/Null | Assisted sales revenue (null when no assisted sales data is available) |
+| `assisted_roas`   | String/Null | Return on ad spend from assisted orders (null when no assisted sales data is available) |
+| `assisted_orders` | String/Null | Number of orders assisted by the ad (null when no assisted sales data is available) |
+| `assisted_items`  | String/Null | Number of items from assisted orders (null when no assisted sales data is available) |
+| `overall_roas`    | String | Combined return on ad spend from direct and assisted sales |

@@ -24,7 +24,7 @@ curl --location 'https://api-retail-media.newtail.com.br/report/network/publishe
 | `page`            | No       | Page number of the results. Default: `1`.                                                                                                           |
 | `quantity`        | No       | Number of items per page. Default: `100`.                                                                                                           |
 | `count`           | No       | If `true`, returns the total number of available records. Default: `false`.                                                                         |
-| `order_by`        | No       | Field for sorting results. Possible values: `name`, `impressions`, `clicks`, `ctr`, `conversions`, `conversion_rate`, `income`, `roas`, `requests`. |
+| `order_by`        | No       | Field for sorting results. Possible values: `name`, `impressions`, `clicks`, `ctr`, `conversions`, `conversion_rate`, `conversion_rate_view`, `income`, `roas`, `requests`. |
 | `order_direction` | No       | Sort direction. Possible values: `asc` (ascending) or `desc` (descending).                                                                          |
 | `download`        | No       | If `true`, returns an XLSX file buffer for download instead of JSON.                                                                                |
 
@@ -46,7 +46,8 @@ curl --location 'https://api-retail-media.newtail.com.br/report/network/publishe
         "views": "0",
         "clicks": "0",
         "conversions": "0",
-        "conversion_rate": "0",
+        "conversion_rate": "0.00",
+        "conversion_rate_view": "0.00",
         "total_conversions_items_quantity": "0",
         "ctr": "0",
         "income": "0.00",
@@ -101,7 +102,8 @@ curl --location 'https://api-retail-media.newtail.com.br/report/network/publishe
 | `views`                            | String | Total number of ad views          |
 | `clicks`                           | String | Total number of ad clicks         |
 | `conversions`                      | String | Total number of conversions       |
-| `conversion_rate`                  | String | Conversion rate percentage        |
+| `conversion_rate`                  | String | Conversion rate percentage (clicks-based) |
+| `conversion_rate_view`             | String | Conversion rate percentage (views-based)  |
 | `total_conversions_items_quantity` | String | Total quantity of converted items |
 | `ctr`                              | String | Click-through rate percentage     |
 | `income`                           | String | Total income generated            |

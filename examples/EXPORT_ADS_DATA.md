@@ -29,7 +29,7 @@ curl --location 'https://api-retail-media.newtail.com.br/ad/results/v2?start_dat
 | `page`                  | No       | Page number of the results. Default: `1`.                               |
 | `quantity`              | No       | Number of items per page. Default: `100`.                               |
 | `count`                 | No       | If `true`, returns the total number of available records. Default: `false`. |
-| `order_by`              | No       | Field for sorting results. Possible values: `ad_type`, `ad_status`, `impressions`, `conversion_rate`, `ctr`, `income`, `total_spent`, `roas`, `conversions`, `total_conversions_item_quantity`. |
+| `order_by`              | No       | Field for sorting results. Possible values: `ad_type`, `ad_status`, `impressions`, `conversion_rate`, `conversion_rate_view`, `ctr`, `income`, `total_spent`, `roas`, `conversions`, `total_conversions_item_quantity`. |
 | `order_direction`       | No       | Sort direction. Possible values: `asc` (ascending) or `desc` (descending). |
 | `download`              | No       | If `true`, returns an XLSX file buffer for download instead of JSON. |
 
@@ -100,6 +100,7 @@ Important: Paused ads are excluded from the default response. To include paused 
         "impressions": "2900",
         "views": "2689",
         "conversion_rate": "1.89",
+        "conversion_rate_view": "0.04",
         "ctr": "1.83",
         "roas": "0.18",
         "adcost": "540.94",
@@ -108,7 +109,12 @@ Important: Paused ads are excluded from the default response. To include paused 
         "ecpm": "1.85",
         "cpa": "29000.00",
         "avg_cpc": "547.17",
-        "avg_cpm": "10000.00"
+        "avg_cpm": "10000.00",
+        "assisted_income": "1200.00",
+        "assisted_roas": "0.04",
+        "assisted_orders": "1",
+        "assisted_items": "2",
+        "overall_roas": "0.22"
       }
     }
   ]
@@ -197,7 +203,8 @@ Important: This object is dynamic, depending on the type of campaign it may cont
 | `total_conversions_items_quantity` | String | Total quantity of converted items |
 | `impressions`                      | String | Total number of impressions       |
 | `views`                            | String | Total number of views             |
-| `conversion_rate`                  | String | Conversion rate percentage        |
+| `conversion_rate`                  | String | Conversion rate percentage (clicks-based) |
+| `conversion_rate_view`             | String | Conversion rate percentage (views-based)  |
 | `ctr`                              | String | Click-through rate percentage     |
 | `roas`                             | String | Return on ad spend                |
 | `adcost`                           | String | Ad cost percentage                |
@@ -207,3 +214,8 @@ Important: This object is dynamic, depending on the type of campaign it may cont
 | `cpa`                              | String | Cost per acquisition              |
 | `avg_cpc`                          | String | Average cost per click            |
 | `avg_cpm`                          | String | Average cost per mille            |
+| `assisted_income`                  | String/Null | Assisted sales revenue (null when no assisted sales data is available) |
+| `assisted_roas`                    | String/Null | Return on ad spend from assisted orders (null when no assisted sales data is available) |
+| `assisted_orders`                  | String/Null | Number of orders assisted by the ad (null when no assisted sales data is available) |
+| `assisted_items`                   | String/Null | Number of items from assisted orders (null when no assisted sales data is available) |
+| `overall_roas`                     | String | Combined return on ad spend from direct and assisted sales |
